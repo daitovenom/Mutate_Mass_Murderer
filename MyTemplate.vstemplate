@@ -1,0 +1,43 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Name>test+20230430</Name>
+    <Description>&lt;説明はありません。&gt;</Description>
+    <ProjectType>VC</ProjectType>
+    <ProjectSubType>
+    </ProjectSubType>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>test+20230430</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <Icon>__TemplateIcon.ico</Icon>
+  </TemplateData>
+  <TemplateContent>
+    <Project TargetFileName="test+.vcxproj" File="test+.vcxproj" ReplaceParameters="true">
+      <ProjectItem ReplaceParameters="false" TargetFileName="$projectname$.vcxproj.filters">test+.vcxproj.filters</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="testgame2023+.cpp">testgame2023+.cpp</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName=".h">.h</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="aruku.h">aruku.h</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="countine.h">countine.h</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="kasurikougeki.h">kasurikougeki.h</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="key.h">key.h</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="playerhensuuVr2.h">playerhensuuVr2.h</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="sennkounyuuryokujyuujiki.h">sennkounyuuryokujyuujiki.h</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="settoku.h">settoku.h</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="settoku2.h">settoku2.h</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="stage1Player_Draw.h">stage1Player_Draw.h</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="stage2Player_Draw.h">stage2Player_Draw.h</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="stgae1Player_Update.h">stgae1Player_Update.h</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="stgae2Player_Update.h">stgae2Player_Update.h</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="suraidoidoubyouga.h">suraidoidoubyouga.h</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="syuzinkoukougekigazou.h">syuzinkoukougekigazou.h</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="syuzinnkouDAMEGIjyoutai.h">syuzinnkouDAMEGIjyoutai.h</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="syuzinnkouKENJYUU.h">syuzinnkouKENJYUU.h</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="syuzinnkouKOUGEKI.h">syuzinnkouKOUGEKI.h</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="taitol.h">taitol.h</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="talk.h">talk.h</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="UEsuraido.h">UEsuraido.h</ProjectItem>
+    </Project>
+  </TemplateContent>
+</VSTemplate>

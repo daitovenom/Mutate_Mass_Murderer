@@ -1,0 +1,74 @@
+﻿  testgame2023+.cpp
+D:\private\DxlibProject\test+20230430最新\Source\Player\playerhensuuVr2.h(225,16): warning C4244: '=': 'double' から 'int' への変換です。データが失われる可能性があります。
+D:\private\DxlibProject\test+20230430最新\Source\Player\playerhensuuVr2.h(971,42): warning C4838: 'double' から 'int' への変換には縮小変換が必要です
+D:\private\DxlibProject\test+20230430最新\Source\Player\playerhensuuVr2.h(971,42): warning C4244: '初期化中': 'double' から 'int' への変換です。データが失われる可能性があります。
+D:\private\DxlibProject\test+20230430最新\Source\talk.h(171,8): warning C4553: '==': 式の結果が使用されていません。'=' を意図していますか?
+D:\private\DxlibProject\test+20230430最新\Source\syuzinkoukougekigazou.h(1,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
+D:\private\DxlibProject\test+20230430最新\Source\syuzinkoukougekigazou.h(528,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
+D:\private\DxlibProject\test+20230430最新\Source\stage1Player_Draw.h(55,53): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
+D:\private\DxlibProject\test+20230430最新\Source\stage1Player_Draw.h(277,95): warning C4244: '引数': 'double' から 'int' への変換です。データが失われる可能性があります。
+D:\private\DxlibProject\test+20230430最新\Source\stage1Player_Draw.h(277,48): warning C4244: '引数': 'double' から 'int' への変換です。データが失われる可能性があります。
+D:\private\DxlibProject\test+20230430最新\Source\stage1Player_Draw.h(283,95): warning C4244: '引数': 'double' から 'int' への変換です。データが失われる可能性があります。
+D:\private\DxlibProject\test+20230430最新\Source\stage1Player_Draw.h(283,48): warning C4244: '引数': 'double' から 'int' への変換です。データが失われる可能性があります。
+D:\private\DxlibProject\test+20230430最新\Source\stage1Player_Draw.h(289,95): warning C4244: '引数': 'double' から 'int' への変換です。データが失われる可能性があります。
+D:\private\DxlibProject\test+20230430最新\Source\stage1Player_Draw.h(289,48): warning C4244: '引数': 'double' から 'int' への変換です。データが失われる可能性があります。
+D:\private\DxlibProject\test+20230430最新\Source\stage1Player_Draw.h(431,95): warning C4244: '引数': 'double' から 'int' への変換です。データが失われる可能性があります。
+D:\private\DxlibProject\test+20230430最新\Source\stage1Player_Draw.h(431,48): warning C4244: '引数': 'double' から 'int' への変換です。データが失われる可能性があります。
+D:\private\DxlibProject\test+20230430最新\Source\stage1Player_Draw.h(438,95): warning C4244: '引数': 'double' から 'int' への変換です。データが失われる可能性があります。
+D:\private\DxlibProject\test+20230430最新\Source\stage1Player_Draw.h(438,48): warning C4244: '引数': 'double' から 'int' への変換です。データが失われる可能性があります。
+D:\private\DxlibProject\test+20230430最新\Source\stage1Player_Draw.h(444,95): warning C4244: '引数': 'double' から 'int' への変換です。データが失われる可能性があります。
+D:\private\DxlibProject\test+20230430最新\Source\stage1Player_Draw.h(444,48): warning C4244: '引数': 'double' から 'int' への変換です。データが失われる可能性があります。
+D:\private\DxlibProject\test+20230430最新\Source\stage1Player_Draw.h(3187,17): warning C4305: '=': 'double' から 'float' へ切り詰めます。
+D:\private\DxlibProject\test+20230430最新\Source\stage1Player_Draw.h(3211,17): warning C4305: '=': 'double' から 'float' へ切り詰めます。
+D:\private\DxlibProject\test+20230430最新\Source\stgae2Player_Update.h(148,14): warning C4244: '=': 'double' から 'float' への変換です。データが失われる可能性があります。
+D:\private\DxlibProject\test+20230430最新\Source\stgae2Player_Update.h(153,14): warning C4244: '=': 'double' から 'float' への変換です。データが失われる可能性があります。
+D:\private\DxlibProject\test+20230430最新\Source\stgae2Player_Update.h(157,14): warning C4244: '=': 'double' から 'float' への変換です。データが失われる可能性があります。
+D:\private\DxlibProject\test+20230430最新\Source\stgae2Player_Update.h(161,14): warning C4244: '=': 'double' から 'float' への変換です。データが失われる可能性があります。
+D:\private\DxlibProject\test+20230430最新\Source\stgae2Player_Update.h(165,14): warning C4244: '=': 'double' から 'float' への変換です。データが失われる可能性があります。
+D:\private\DxlibProject\test+20230430最新\Source\stgae2Player_Update.h(169,14): warning C4244: '=': 'double' から 'float' への変換です。データが失われる可能性があります。
+D:\private\DxlibProject\test+20230430最新\Source\UEsuraido.h(1,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
+D:\private\DxlibProject\test+20230430最新\Source\UEsuraido.h(22,94): warning C4244: '引数': 'double' から 'int' への変換です。データが失われる可能性があります。
+D:\private\DxlibProject\test+20230430最新\Source\UEsuraido.h(22,47): warning C4244: '引数': 'double' から 'int' への変換です。データが失われる可能性があります。
+D:\private\DxlibProject\test+20230430最新\Source\UEsuraido.h(29,94): warning C4244: '引数': 'double' から 'int' への変換です。データが失われる可能性があります。
+D:\private\DxlibProject\test+20230430最新\Source\UEsuraido.h(29,47): warning C4244: '引数': 'double' から 'int' への変換です。データが失われる可能性があります。
+D:\private\DxlibProject\test+20230430最新\Source\UEsuraido.h(35,94): warning C4244: '引数': 'double' から 'int' への変換です。データが失われる可能性があります。
+D:\private\DxlibProject\test+20230430最新\Source\UEsuraido.h(35,47): warning C4244: '引数': 'double' から 'int' への変換です。データが失われる可能性があります。
+D:\private\DxlibProject\test+20230430最新\Source\stage2Player_Draw.h(71,150): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
+D:\private\DxlibProject\test+20230430最新\Source\stage2Player_Draw.h(71,113): warning C4244: '引数': 'double' から 'float' への変換です。データが失われる可能性があります。
+D:\private\DxlibProject\test+20230430最新\Source\stage2Player_Draw.h(80,53): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
+D:\private\DxlibProject\test+20230430最新\Source\stage2Player_Draw.h(99,198): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
+D:\private\DxlibProject\test+20230430最新\Source\stage2Player_Draw.h(335,95): warning C4244: '引数': 'double' から 'int' への変換です。データが失われる可能性があります。
+D:\private\DxlibProject\test+20230430最新\Source\stage2Player_Draw.h(335,48): warning C4244: '引数': 'double' から 'int' への変換です。データが失われる可能性があります。
+D:\private\DxlibProject\test+20230430最新\Source\stage2Player_Draw.h(341,95): warning C4244: '引数': 'double' から 'int' への変換です。データが失われる可能性があります。
+D:\private\DxlibProject\test+20230430最新\Source\stage2Player_Draw.h(341,48): warning C4244: '引数': 'double' から 'int' への変換です。データが失われる可能性があります。
+D:\private\DxlibProject\test+20230430最新\Source\stage2Player_Draw.h(347,95): warning C4244: '引数': 'double' から 'int' への変換です。データが失われる可能性があります。
+D:\private\DxlibProject\test+20230430最新\Source\stage2Player_Draw.h(347,48): warning C4244: '引数': 'double' から 'int' への変換です。データが失われる可能性があります。
+D:\private\DxlibProject\test+20230430最新\Source\stage2Player_Draw.h(372,95): warning C4244: '引数': 'double' から 'int' への変換です。データが失われる可能性があります。
+D:\private\DxlibProject\test+20230430最新\Source\stage2Player_Draw.h(372,48): warning C4244: '引数': 'double' から 'int' への変換です。データが失われる可能性があります。
+D:\private\DxlibProject\test+20230430最新\Source\stage2Player_Draw.h(379,95): warning C4244: '引数': 'double' から 'int' への変換です。データが失われる可能性があります。
+D:\private\DxlibProject\test+20230430最新\Source\stage2Player_Draw.h(379,48): warning C4244: '引数': 'double' から 'int' への変換です。データが失われる可能性があります。
+D:\private\DxlibProject\test+20230430最新\Source\stage2Player_Draw.h(385,95): warning C4244: '引数': 'double' から 'int' への変換です。データが失われる可能性があります。
+D:\private\DxlibProject\test+20230430最新\Source\stage2Player_Draw.h(385,48): warning C4244: '引数': 'double' から 'int' への変換です。データが失われる可能性があります。
+D:\private\DxlibProject\test+20230430最新\Source\stage2Player_Draw.h(2588,121): warning C4804: '<': 演算中の 'bool' 型の使用方法が安全ではありません
+D:\private\DxlibProject\test+20230430最新\Source\stage2Player_Draw.h(2663,121): warning C4804: '<': 演算中の 'bool' 型の使用方法が安全ではありません
+D:\private\DxlibProject\test+20230430最新\Source\stage2Player_Draw.h(2739,99): warning C4804: '<': 演算中の 'bool' 型の使用方法が安全ではありません
+D:\private\DxlibProject\test+20230430最新\Source\stage2Player_Draw.h(2814,99): warning C4804: '<': 演算中の 'bool' 型の使用方法が安全ではありません
+D:\private\DxlibProject\test+20230430最新\Source\stage2Player_Draw.h(2889,99): warning C4804: '<': 演算中の 'bool' 型の使用方法が安全ではありません
+D:\private\DxlibProject\test+20230430最新\Source\stage2Player_Draw.h(2964,96): warning C4804: '<': 演算中の 'bool' 型の使用方法が安全ではありません
+D:\private\DxlibProject\test+20230430最新\Source\stage2Player_Draw.h(3040,96): warning C4804: '<': 演算中の 'bool' 型の使用方法が安全ではありません
+D:\private\DxlibProject\test+20230430最新\Source\stage2Player_Draw.h(3119,118): warning C4804: '<': 演算中の 'bool' 型の使用方法が安全ではありません
+D:\private\DxlibProject\test+20230430最新\Source\stage2Player_Draw.h(3430,17): warning C4305: '=': 'double' から 'float' へ切り詰めます。
+D:\private\DxlibProject\test+20230430最新\Source\stage2Player_Draw.h(3455,17): warning C4305: '=': 'double' から 'float' へ切り詰めます。
+D:\private\DxlibProject\test+20230430最新\Source\stage2Player_Draw.h(3469,18): warning C4305: '=': 'double' から 'float' へ切り詰めます。
+D:\private\DxlibProject\test+20230430最新\Source\stage2Player_Draw.h(3494,18): warning C4305: '=': 'double' から 'float' へ切り詰めます。
+D:\private\DxlibProject\test+20230430最新\Source\stage2Player_Draw.h(3920,14): warning C4244: '=': 'double' から 'float' への変換です。データが失われる可能性があります。
+D:\private\DxlibProject\test+20230430最新\Source\stage2Player_Draw.h(3925,14): warning C4244: '=': 'double' から 'float' への変換です。データが失われる可能性があります。
+D:\private\DxlibProject\test+20230430最新\Source\stage2Player_Draw.h(3929,14): warning C4244: '=': 'double' から 'float' への変換です。データが失われる可能性があります。
+D:\private\DxlibProject\test+20230430最新\Source\stage2Player_Draw.h(3933,14): warning C4244: '=': 'double' から 'float' への変換です。データが失われる可能性があります。
+D:\private\DxlibProject\test+20230430最新\Source\stage2Player_Draw.h(3937,14): warning C4244: '=': 'double' から 'float' への変換です。データが失われる可能性があります。
+D:\private\DxlibProject\test+20230430最新\Source\stage2Player_Draw.h(3941,14): warning C4244: '=': 'double' から 'float' への変換です。データが失われる可能性があります。
+  コード生成しています。
+  Previous IPDB not found, fall back to full compilation.
+  All 57 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  コード生成が終了しました。
+  test+.vcxproj -> D:\private\DxlibProject\test+20230430最新\Release\test+.exe

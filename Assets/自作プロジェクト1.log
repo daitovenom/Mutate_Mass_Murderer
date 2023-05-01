@@ -1,0 +1,68 @@
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(519,5): warning MSB8028: 中間ディレクトリ (x64\Release\) に別のプロジェクト (Project1.vcxproj) と共有されているファイルが含まれています。これにより、クリーンしてリビルド動作が適切に行われない可能性があります。
+  test2.cpp
+C:\自作プロジェクト\x64\Release\playerhensuuVr2.h(223,16): warning C4244: '=': 'double' から 'int' への変換です。データが失われる可能性があります。
+C:\自作プロジェクト\x64\Release\playerhensuuVr2.h(971,42): warning C4838: 'double' から 'int' への変換には縮小変換が必要です
+C:\自作プロジェクト\x64\Release\playerhensuuVr2.h(971,42): warning C4244: '初期化中': 'double' から 'int' への変換です。データが失われる可能性があります。
+C:\自作プロジェクト\x64\Release\talk.h(171,8): warning C4553: '==': 式の結果が使用されていません。'=' を意図していますか?
+C:\自作プロジェクト\x64\Release\syuzinkoukougekigazou.h(1,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
+C:\自作プロジェクト\x64\Release\syuzinkoukougekigazou.h(521,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
+C:\自作プロジェクト\x64\Release\stage1Player_Draw.h(55,53): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
+C:\自作プロジェクト\x64\Release\stage1Player_Draw.h(277,95): warning C4244: '引数': 'double' から 'int' への変換です。データが失われる可能性があります。
+C:\自作プロジェクト\x64\Release\stage1Player_Draw.h(277,48): warning C4244: '引数': 'double' から 'int' への変換です。データが失われる可能性があります。
+C:\自作プロジェクト\x64\Release\stage1Player_Draw.h(283,95): warning C4244: '引数': 'double' から 'int' への変換です。データが失われる可能性があります。
+C:\自作プロジェクト\x64\Release\stage1Player_Draw.h(283,48): warning C4244: '引数': 'double' から 'int' への変換です。データが失われる可能性があります。
+C:\自作プロジェクト\x64\Release\stage1Player_Draw.h(289,95): warning C4244: '引数': 'double' から 'int' への変換です。データが失われる可能性があります。
+C:\自作プロジェクト\x64\Release\stage1Player_Draw.h(289,48): warning C4244: '引数': 'double' から 'int' への変換です。データが失われる可能性があります。
+C:\自作プロジェクト\x64\Release\stage1Player_Draw.h(431,95): warning C4244: '引数': 'double' から 'int' への変換です。データが失われる可能性があります。
+C:\自作プロジェクト\x64\Release\stage1Player_Draw.h(431,48): warning C4244: '引数': 'double' から 'int' への変換です。データが失われる可能性があります。
+C:\自作プロジェクト\x64\Release\stage1Player_Draw.h(438,95): warning C4244: '引数': 'double' から 'int' への変換です。データが失われる可能性があります。
+C:\自作プロジェクト\x64\Release\stage1Player_Draw.h(438,48): warning C4244: '引数': 'double' から 'int' への変換です。データが失われる可能性があります。
+C:\自作プロジェクト\x64\Release\stage1Player_Draw.h(444,95): warning C4244: '引数': 'double' から 'int' への変換です。データが失われる可能性があります。
+C:\自作プロジェクト\x64\Release\stage1Player_Draw.h(444,48): warning C4244: '引数': 'double' から 'int' への変換です。データが失われる可能性があります。
+C:\自作プロジェクト\x64\Release\stage1Player_Draw.h(3194,17): warning C4305: '=': 'double' から 'float' へ切り詰めます。
+C:\自作プロジェクト\x64\Release\stage1Player_Draw.h(3218,17): warning C4305: '=': 'double' から 'float' へ切り詰めます。
+C:\自作プロジェクト\x64\Release\stgae2Player_Update.h(143,14): warning C4244: '=': 'double' から 'float' への変換です。データが失われる可能性があります。
+C:\自作プロジェクト\x64\Release\stgae2Player_Update.h(148,14): warning C4244: '=': 'double' から 'float' への変換です。データが失われる可能性があります。
+C:\自作プロジェクト\x64\Release\stgae2Player_Update.h(152,14): warning C4244: '=': 'double' から 'float' への変換です。データが失われる可能性があります。
+C:\自作プロジェクト\x64\Release\stgae2Player_Update.h(156,14): warning C4244: '=': 'double' から 'float' への変換です。データが失われる可能性があります。
+C:\自作プロジェクト\x64\Release\stgae2Player_Update.h(160,14): warning C4244: '=': 'double' から 'float' への変換です。データが失われる可能性があります。
+C:\自作プロジェクト\x64\Release\stgae2Player_Update.h(164,14): warning C4244: '=': 'double' から 'float' への変換です。データが失われる可能性があります。
+C:\自作プロジェクト\x64\Release\UEsuraido.h(1,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
+C:\自作プロジェクト\x64\Release\UEsuraido.h(22,94): warning C4244: '引数': 'double' から 'int' への変換です。データが失われる可能性があります。
+C:\自作プロジェクト\x64\Release\UEsuraido.h(22,47): warning C4244: '引数': 'double' から 'int' への変換です。データが失われる可能性があります。
+C:\自作プロジェクト\x64\Release\UEsuraido.h(29,94): warning C4244: '引数': 'double' から 'int' への変換です。データが失われる可能性があります。
+C:\自作プロジェクト\x64\Release\UEsuraido.h(29,47): warning C4244: '引数': 'double' から 'int' への変換です。データが失われる可能性があります。
+C:\自作プロジェクト\x64\Release\UEsuraido.h(35,94): warning C4244: '引数': 'double' から 'int' への変換です。データが失われる可能性があります。
+C:\自作プロジェクト\x64\Release\UEsuraido.h(35,47): warning C4244: '引数': 'double' から 'int' への変換です。データが失われる可能性があります。
+C:\自作プロジェクト\x64\Release\stage2Player_Draw.h(63,150): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
+C:\自作プロジェクト\x64\Release\stage2Player_Draw.h(63,113): warning C4244: '引数': 'double' から 'float' への変換です。データが失われる可能性があります。
+C:\自作プロジェクト\x64\Release\stage2Player_Draw.h(72,53): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
+C:\自作プロジェクト\x64\Release\stage2Player_Draw.h(91,198): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
+C:\自作プロジェクト\x64\Release\stage2Player_Draw.h(327,95): warning C4244: '引数': 'double' から 'int' への変換です。データが失われる可能性があります。
+C:\自作プロジェクト\x64\Release\stage2Player_Draw.h(327,48): warning C4244: '引数': 'double' から 'int' への変換です。データが失われる可能性があります。
+C:\自作プロジェクト\x64\Release\stage2Player_Draw.h(333,95): warning C4244: '引数': 'double' から 'int' への変換です。データが失われる可能性があります。
+C:\自作プロジェクト\x64\Release\stage2Player_Draw.h(333,48): warning C4244: '引数': 'double' から 'int' への変換です。データが失われる可能性があります。
+C:\自作プロジェクト\x64\Release\stage2Player_Draw.h(339,95): warning C4244: '引数': 'double' から 'int' への変換です。データが失われる可能性があります。
+C:\自作プロジェクト\x64\Release\stage2Player_Draw.h(339,48): warning C4244: '引数': 'double' から 'int' への変換です。データが失われる可能性があります。
+C:\自作プロジェクト\x64\Release\stage2Player_Draw.h(364,95): warning C4244: '引数': 'double' から 'int' への変換です。データが失われる可能性があります。
+C:\自作プロジェクト\x64\Release\stage2Player_Draw.h(364,48): warning C4244: '引数': 'double' から 'int' への変換です。データが失われる可能性があります。
+C:\自作プロジェクト\x64\Release\stage2Player_Draw.h(371,95): warning C4244: '引数': 'double' から 'int' への変換です。データが失われる可能性があります。
+C:\自作プロジェクト\x64\Release\stage2Player_Draw.h(371,48): warning C4244: '引数': 'double' から 'int' への変換です。データが失われる可能性があります。
+C:\自作プロジェクト\x64\Release\stage2Player_Draw.h(377,95): warning C4244: '引数': 'double' から 'int' への変換です。データが失われる可能性があります。
+C:\自作プロジェクト\x64\Release\stage2Player_Draw.h(377,48): warning C4244: '引数': 'double' から 'int' への変換です。データが失われる可能性があります。
+C:\自作プロジェクト\x64\Release\stage2Player_Draw.h(2622,17): warning C4305: '=': 'double' から 'float' へ切り詰めます。
+C:\自作プロジェクト\x64\Release\stage2Player_Draw.h(2647,17): warning C4305: '=': 'double' から 'float' へ切り詰めます。
+C:\自作プロジェクト\x64\Release\stage2Player_Draw.h(2661,18): warning C4305: '=': 'double' から 'float' へ切り詰めます。
+C:\自作プロジェクト\x64\Release\stage2Player_Draw.h(2686,18): warning C4305: '=': 'double' から 'float' へ切り詰めます。
+C:\自作プロジェクト\x64\Release\stage2Player_Draw.h(3080,14): warning C4244: '=': 'double' から 'float' への変換です。データが失われる可能性があります。
+C:\自作プロジェクト\x64\Release\stage2Player_Draw.h(3085,14): warning C4244: '=': 'double' から 'float' への変換です。データが失われる可能性があります。
+C:\自作プロジェクト\x64\Release\stage2Player_Draw.h(3089,14): warning C4244: '=': 'double' から 'float' への変換です。データが失われる可能性があります。
+C:\自作プロジェクト\x64\Release\stage2Player_Draw.h(3093,14): warning C4244: '=': 'double' から 'float' への変換です。データが失われる可能性があります。
+C:\自作プロジェクト\x64\Release\stage2Player_Draw.h(3097,14): warning C4244: '=': 'double' から 'float' への変換です。データが失われる可能性があります。
+C:\自作プロジェクト\x64\Release\stage2Player_Draw.h(3101,14): warning C4244: '=': 'double' から 'float' への変換です。データが失われる可能性があります。
+  コード生成しています。
+  2 of 56 functions ( 3.6%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    2 functions had inline decision re-evaluated but remain unchanged
+  コード生成が終了しました。
+  自作プロジェクト1.vcxproj -> C:\自作プロジェクト\x64\Release\自作プロジェクト1.exe

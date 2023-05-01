@@ -1,0 +1,2 @@
+﻿LIBCMT.lib(exe_main.obj) : error LNK2001: 外部シンボル "main" は未解決です。
+C:\Users\daito\Desktop\test\x64\Release\今現在の新しいtest.exe : fatal error LNK1120: 1 件の未解決の外部参照

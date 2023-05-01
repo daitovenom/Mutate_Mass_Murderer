@@ -1,0 +1,19 @@
+﻿  test2.cpp
+C:\Users\daito\Desktop\自作プロジェクト1\x64\Release\stage1Player_Draw.h(280,95): warning C4244: '引数': 'double' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\daito\Desktop\自作プロジェクト1\x64\Release\stage1Player_Draw.h(280,48): warning C4244: '引数': 'double' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\daito\Desktop\自作プロジェクト1\x64\Release\stage1Player_Draw.h(286,95): warning C4244: '引数': 'double' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\daito\Desktop\自作プロジェクト1\x64\Release\stage1Player_Draw.h(286,48): warning C4244: '引数': 'double' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\daito\Desktop\自作プロジェクト1\x64\Release\stage1Player_Draw.h(292,95): warning C4244: '引数': 'double' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\daito\Desktop\自作プロジェクト1\x64\Release\stage1Player_Draw.h(292,48): warning C4244: '引数': 'double' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\daito\Desktop\自作プロジェクト1\x64\Release\stage1Player_Draw.h(317,95): warning C4244: '引数': 'double' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\daito\Desktop\自作プロジェクト1\x64\Release\stage1Player_Draw.h(317,48): warning C4244: '引数': 'double' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\daito\Desktop\自作プロジェクト1\x64\Release\stage1Player_Draw.h(324,95): warning C4244: '引数': 'double' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\daito\Desktop\自作プロジェクト1\x64\Release\stage1Player_Draw.h(324,48): warning C4244: '引数': 'double' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\daito\Desktop\自作プロジェクト1\x64\Release\stage1Player_Draw.h(330,95): warning C4244: '引数': 'double' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\daito\Desktop\自作プロジェクト1\x64\Release\stage1Player_Draw.h(330,48): warning C4244: '引数': 'double' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\daito\Desktop\自作プロジェクト1\x64\Release\test2.cpp(365,13): warning C4566: ユニバーサル文字名 '\u00A5' によって表示されている文字は、現在のコード ページ (932) で表示できません
+  コード生成しています。
+  Previous IPDB not found, fall back to full compilation.
+  All 38 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  コード生成が終了しました。
+  Project1.vcxproj -> C:\Users\daito\Desktop\自作ゲームの会話部分の確認のためのpuroject\自作ゲームの会話部分の確認のためのpuroject\Project1\x64\Release\Project1.exe
