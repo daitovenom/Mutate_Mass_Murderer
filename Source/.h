@@ -1,4 +1,5 @@
-﻿#include "DxLib.h"
+﻿/*
+#include "DxLib.h"
 
 #ifndef DEF_PLAYERHENNSUU_H //二重include防止
 
@@ -352,3 +353,4 @@ int sennkounyuuryokubunnki3 = 0;
 //ステージ1の関数を呼び出すための変数の場所
 int stage1PlayerDrawyobidasi = 0;
 #endif
+*/

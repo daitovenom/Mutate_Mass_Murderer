@@ -153,12 +153,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Source\Game.cpp" />
     <ClCompile Include="Source\testgame2023+.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Source\.h" />
     <ClInclude Include="Source\countine.h" />
+    <ClInclude Include="Source\Game.h" />
     <ClInclude Include="Source\kasurikougeki.h" />
     <ClInclude Include="Source\key.h" />
+    <ClInclude Include="Source\Player\playerhensuuVr2.h" />
     <ClInclude Include="Source\sennkounyuuryokujyuujiki.h" />
     <ClInclude Include="Source\settoku.h" />
     <ClInclude Include="Source\settoku2.h" />
