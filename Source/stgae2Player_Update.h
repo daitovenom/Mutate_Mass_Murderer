@@ -1233,48 +1233,486 @@ void Player_Update2() {
 
 
 
-						int a = pos[enemyY1][enemyX1][1] + playerattackhanndou3;
-						int b = pos[playerY][playerX][1] + nanameidouY + nanameidouY2 + nanameidouY3;
+						//š«‚±‚±‚©‚ç‚Í‰EŒü‚«‚Ì“G1‚ÌY²‚Æ“G2‚ÌY²‚ÌålŒö‚ª“G1‚Éƒ_ƒ[ƒW‚ğ—^‚¦‚é•”•ª‚É‚È‚éB
+						//’·‚¢if•¶‚Í“G1‚â“G2‚ğ‚Ü‚½‚¢‚ÅUŒ‚‚µ‚ÄƒŠAŠÑ’Ê‚µ‚Ä‚Ó‚½‚è‚Ì“G‚ÉUŒ‚‚µ‚È‚¢‚æ‚¤‚É‚µ‚½‚èA“¯‚¶Y²‚É‚Ó‚½‚è“G‚ª‚¢‚é‚É
+						//ålŒö‚ÌŒü‚­•ûŒü‚Ì“G‚¾‚¯‚ÉUŒ‚‚ğ“–‚Ä‚ê‚é‚æ‚¤‚É‚·‚é‚½‚ß‚ÌƒvƒƒOƒ‰ƒ€‚Å‚ ‚éB
 
-						int c = pos[enemyY1][enemyX1][0]
-							+ playerattackhanndou + playerattackhanndou2 + playerattackhanndou3;
-						int d = pos[playerY][playerX][0]
-							+ nanameidouX + migiidou + nanameidouX2 + nanameidouX3;
-						int e = pos[enemyY2][enemyX2][0]
-							+ playerattackhanndouB + playerattackhanndou2B + playerattackhanndou3B;
 
-						if (a + 15 >= b && a - 15 <= b) {
-							tyokusennkougeki = 1;
-							if (tyokusennkougeki == 1) {
-								if (c >= d - 15 && c <= e && d <= e ||
-									c >= d - 15 && c >= e && d >= e ||
-									c >= d - 15 && c >= e && d <= e ||
-									c >= d - 15 && c >= e && d >= e) {
 
-									kougekiKANOU = 10;
-									GenemysabunHP = 40;
-									point = 123;
-								}
+
+					//Ô‚¢“G‚ÌY‚ÉŠÖŒW‚È‚­•À‚Ñ‡‚ª‚»‚ë‚¦‚Î‚±‚ÌƒvƒƒOƒ‰ƒ€‚ªÀs‚³‚ê‚éB
+						//šˆÊ’u‚Ìó‘Ô‚ÍƒvƒƒOƒ‰ƒ€‚Í”cˆ¬‚Å‚«‚é‚ªålŒö‚ÌŒü‚«‚Ü‚Å‚Í”cˆ¬‚Å‚«‚È‚¢¶Œü‚«‚Ì‚±‚Ì•À‚Ñ‚©‚à‚µ‚ê‚È‚¢‚½‚ßŒü‚«‚Ìî•ñ‚Íif•¶‘‚­•K—v‚ª‚ ‚éB
+						//Y²‚Í“G1‚É‚µ‚ÄA
+						//X²‚ªålŒöƒ“G1ƒ“G2‚Ì‡‚É‘‚©‚ê‚Ä‚¢‚éB
+						if (migimuki == 1 &&
+							pos[enemyY1][enemyX1][1] + 20 + playerattackhanndou3 >= pos[playerY][playerX][1] + nanameidouY + nanameidouY2 + nanameidouY3 &&
+							pos[enemyY1][enemyX1][1] - 20 + playerattackhanndou3 <= pos[playerY][playerX][1] + nanameidouY + nanameidouY2 + nanameidouY3
+							&& pos[enemyY1][enemyX1][0] + playerattackhanndou + playerattackhanndou2 + playerattackhanndou3 >= pos[playerY][playerX][0] + nanameidouX + migiidou + nanameidouX2 + nanameidouX3
+							&& pos[enemyY1][enemyX1][0] + playerattackhanndou + playerattackhanndou2 + playerattackhanndou3 <= pos[enemyY2][enemyX2][0] + playerattackhanndouB + playerattackhanndou2B + playerattackhanndou3B
+							&& pos[playerY][playerX][0] + nanameidouX + migiidou + nanameidouX2 + nanameidouX3 <= pos[enemyY2][enemyX2][0] + playerattackhanndouB + playerattackhanndou2B + playerattackhanndou3B
+							)
+						{
+							tyokusennkougeki = 7;
+
+							if (tyokusennkougeki == 7) {
+								kougekiKANOU = 10;
+								GenemysabunHP = 40;
+								point = 143;
 							}
 						}
-						a = pos[enemyY2][enemyX2][1] + playerattackhanndou3B;
-						if (a + 15 >= b && a - 15 <= b) {
-							tyokusennkougeki = 2;
-							if (tyokusennkougeki == 2) {
-								if (c >= d - 15 && c >= e && d <= e ||
-									c <= d - 15 && c <= e && d <= e ||
-									c >= d - 15 && c <= e && d <= e ||
-									c <= d - 15 && c <= e && d >= e) {
 
-									kougekiKANOU = 10;
-									AGenemysabunHP = 40;
-									point = 123;
-								}
+						/*//Y²‚Í“G1‚É‚µ‚ÄA‚»‚µ‚ÄA“G1‚ÌY²‚Æ“G‚Q‚ÌY²‚ª“¯‚¶‚ÌƒvƒƒOƒ‰ƒ€‚Å‚à‚ ‚éB
+						//X²‚ªålŒöƒ“G1ƒ“G2‚Ì‡‚É‘‚©‚ê‚Ä‚¢‚éB
+						else if (migimuki == 1 &&
+							pos[enemyY1][enemyX1][1] + 20 + playerattackhanndou3 >= pos[playerY][playerX][1] + nanameidouY + nanameidouY2 + nanameidouY3 &&
+							pos[enemyY1][enemyX1][1] - 20 + playerattackhanndou3 <= pos[playerY][playerX][1] + nanameidouY + nanameidouY2 + nanameidouY3 &&
+							pos[enemyY1][enemyX1][1] - 20 + playerattackhanndou3 <= pos[enemyY1][enemyX1][1] - 20 + playerattackhanndou3
+							&& pos[enemyY1][enemyX1][0] + playerattackhanndou + playerattackhanndou2 + playerattackhanndou3 >= pos[playerY][playerX][0] + nanameidouX + migiidou + nanameidouX2 + nanameidouX3
+							&& pos[enemyY1][enemyX1][0] + playerattackhanndou + playerattackhanndou2 + playerattackhanndou3 <= pos[enemyY2][enemyX2][0] + playerattackhanndouB + playerattackhanndou2B + playerattackhanndou3B
+							&& pos[playerY][playerX][0] + nanameidouX + migiidou + nanameidouX2 + nanameidouX3 <= pos[enemyY2][enemyX2][0] + playerattackhanndouB + playerattackhanndou2B + playerattackhanndou3B
+							)
+						{
+							tyokusennkougeki = 7;
+
+							if (tyokusennkougeki == 7) {
+								kougekiKANOU = 10;
+								GenemysabunHP = 40;
+								point = 103;
+							}
+						}*/
+
+						//ålŒö‚ª“G1‚ğ‰E‚ÉA“G2‚ğ¶‚ÉˆÍ‚Ü‚ê‚½‚Æ‚«‚ÌƒvƒƒOƒ‰ƒ€B
+							//²‚Í“G1‚É‚µ‚ÄAš‚±‚±‚ÌƒvƒƒOƒ‰ƒ€‚ª“G2‚ğ‚Ü‚½‚¢‚Å“G2‚ÉUŒ‚‚ğ‰Â”\‚É‚µ‚½ƒvƒƒOƒ‰ƒ€B
+							// ‚»‚Ì‘¼‚Ì“G1‚ª‰EÎ‚ß‚â¶‚µ‚½Î‚ß‚É‚¢‚Ä‚à“G2‚ğŒ‚‚Ä‚é‚ÆŒ¾‚Á‚½–ğŠ„‚à‚Â‚¾‚ë‚¤B
+							//X²‚ª“G2ƒålŒöƒ“G1‚Ì‡‚É‘‚©‚ê‚Ä‚¢‚éB
+						else if (migimuki == 1
+							&& pos[enemyY1][enemyX1][1] + 20 + playerattackhanndou3 >= pos[playerY][playerX][1] + nanameidouY + nanameidouY2 + nanameidouY3 &&
+							pos[enemyY1][enemyX1][1] - 20 + playerattackhanndou3 <= pos[playerY][playerX][1] + nanameidouY + nanameidouY2 + nanameidouY3
+							&& pos[enemyY1][enemyX1][0] + playerattackhanndou + playerattackhanndou2 + playerattackhanndou3 >= pos[playerY][playerX][0] + nanameidouX + migiidou + nanameidouX2 + nanameidouX3
+							&& pos[enemyY1][enemyX1][0] + playerattackhanndou + playerattackhanndou2 + playerattackhanndou3 >= pos[enemyY2][enemyX2][0] + playerattackhanndouB + playerattackhanndou2B + playerattackhanndou3B
+							&& pos[playerY][playerX][0] + nanameidouX + migiidou + nanameidouX2 + nanameidouX3 >= pos[enemyY2][enemyX2][0] + playerattackhanndouB + playerattackhanndou2B + playerattackhanndou3B
+							)
+						{
+							tyokusennkougeki = 6;
+
+							if (tyokusennkougeki == 6) {
+								kougekiKANOU = 10;
+								GenemysabunHP = 40;
+								point = 133;
 							}
 						}
-						else {
-							tyokusennkougeki = 0;
+
+
+						//ålŒöƒ“G2‚Å‚ ‚é‚½‚ß“G‚P‚Ì²‚É‚·‚é•K—v‚ª‚È‚¢B
+						//Y²‚Í“G1
+						//X²‚ªålŒöƒ“G2ƒ“G1‚Ì‡‚É‘‚©‚ê‚Ä‚¢‚éB
+						/*else if (migimuki == 1 &&
+							pos[enemyY1][enemyX1][1] + 10 + playerattackhanndou3 >= pos[playerY][playerX][1] + nanameidouY + nanameidouY2 + nanameidouY3 &&
+							pos[enemyY1][enemyX1][1] - 10 + playerattackhanndou3 <= pos[playerY][playerX][1] + nanameidouY + nanameidouY2 + nanameidouY3
+							&& pos[enemyY1][enemyX1][0] + playerattackhanndou + playerattackhanndou2 + playerattackhanndou3 >= pos[playerY][playerX][0] + nanameidouX + migiidou + nanameidouX2 + nanameidouX3 - 15
+							&& pos[enemyY1][enemyX1][0] + playerattackhanndou + playerattackhanndou2 + playerattackhanndou3 >= pos[enemyY2][enemyX2][0] + playerattackhanndouB + playerattackhanndou2B + playerattackhanndou3B
+							&& pos[playerY][playerX][0] + nanameidouX + migiidou + nanameidouX2 + nanameidouX3 <= pos[enemyY2][enemyX2][0] + playerattackhanndouB + playerattackhanndou2B + playerattackhanndou3B
+							)
+						{
+							tyokusennkougeki = 4;
+
+							if (tyokusennkougeki == 4) {
+								GenemysabunHP = 40;//Ô‚¢•‚Ì“G2‚Ìƒ_ƒ[ƒW
+								kougekiKANOU = 10;
+								point = 98;
+							}
+						}*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+						//Y²‚Í“G2‚É‚µ‚ÄA
+						//X²‚ª“G1ƒålŒöƒ“G2‚Ì‡‚É‘‚©‚ê‚Ä‚¢‚éB
+						else if (migimuki == 1 && pos[enemyY2][enemyX2][1] + 20 + playerattackhanndou3B >= pos[playerY][playerX][1] + nanameidouY + nanameidouY2 + nanameidouY3 &&
+							pos[enemyY2][enemyX2][1] - 20 + playerattackhanndou3B <= pos[playerY][playerX][1] + nanameidouY + nanameidouY2 + nanameidouY3
+							&& pos[enemyY1][enemyX1][0] + playerattackhanndou + playerattackhanndou2 + playerattackhanndou3 <= pos[playerY][playerX][0] + nanameidouX + migiidou + nanameidouX2 + nanameidouX3
+							&& pos[enemyY1][enemyX1][0] + playerattackhanndou + playerattackhanndou2 + playerattackhanndou3 <= pos[enemyY2][enemyX2][0] + playerattackhanndouB + playerattackhanndou2B + playerattackhanndou3B
+							&& pos[playerY][playerX][0] + nanameidouX + migiidou + nanameidouX2 + nanameidouX3 <= pos[enemyY2][enemyX2][0] + playerattackhanndouB + playerattackhanndou2B + playerattackhanndou3B
+							)
+						{
+
+							kougekiKANOU = 10;
+							AGenemysabunHP = 40;
+							point = 130;
+
 						}
+
+						//ålŒö‚ª“G1‚ğ‰E‚ÉA“G2‚ğ¶‚ÉˆÍ‚Ü‚ê‚½‚Æ‚«‚ÌƒvƒƒOƒ‰ƒ€B
+							//²‚Í“G1‚É‚µ‚ÄAš‚±‚±‚ÌƒvƒƒOƒ‰ƒ€‚ª“G2‚ğ‚Ü‚½‚¢‚Å“G2‚ÉUŒ‚‚ğ‰Â”\‚É‚µ‚½ƒvƒƒOƒ‰ƒ€B
+							// ‚»‚Ì‘¼‚Ì“G1‚ª‰EÎ‚ß‚â¶‚µ‚½Î‚ß‚É‚¢‚Ä‚à“G2‚ğŒ‚‚Ä‚é‚ÆŒ¾‚Á‚½–ğŠ„‚à‚Â‚¾‚ë‚¤B
+							//X²‚ªålŒöƒ“G2ƒ“G1‚Ì‡‚É‘‚©‚ê‚Ä‚¢‚éB
+						else if (migimuki == 1 &&
+							pos[enemyY2][enemyX2][1] + 20 + playerattackhanndou3B >= pos[playerY][playerX][1] + nanameidouY + nanameidouY2 + nanameidouY3 &&
+							pos[enemyY2][enemyX2][1] - 20 + playerattackhanndou3B <= pos[playerY][playerX][1] + nanameidouY + nanameidouY2 + nanameidouY3
+							&& pos[enemyY1][enemyX1][0] + playerattackhanndou + playerattackhanndou2 + playerattackhanndou3 >= pos[playerY][playerX][0] + nanameidouX + migiidou + nanameidouX2 + nanameidouX3
+							&& pos[enemyY1][enemyX1][0] + playerattackhanndou + playerattackhanndou2 + playerattackhanndou3 >= pos[enemyY2][enemyX2][0] + playerattackhanndouB + playerattackhanndou2B + playerattackhanndou3B
+							&& pos[playerY][playerX][0] + nanameidouX + migiidou + nanameidouX2 + nanameidouX3 <= pos[enemyY2][enemyX2][0] + playerattackhanndouB + playerattackhanndou2B + playerattackhanndou3B
+							)
+						{
+							tyokusennkougeki = 6;
+
+							if (tyokusennkougeki == 6) {
+								kougekiKANOU = 10;
+								AGenemysabunHP = 40;
+								point = 139;
+							}
+						}
+
+						//šš‚±‚±‚ª“G1‚ğ‚Ü‚½‚¢‚Å“G2‚ÉUŒ‚‚Å‚«‚é‚±‚Æ‚ğ‰Â”\‚É‚µ‚½ƒvƒƒOƒ‰ƒ€B
+						// ‚»‚Ì‘¼‚Ì“G1‚ª‰EÎ‚ß‚â¶‚µ‚½Î‚ß‚É‚¢‚Ä‚à“G2‚ğŒ‚‚Ä‚é‚ÆŒ¾‚Á‚½–ğŠ„‚à‚Â‚¾‚ë‚¤B
+						//Y²‚Í“G2
+						//X²‚ªålŒöƒ“G2ƒ“G1‚Ì‡‚É‘‚©‚ê‚Ä‚¢‚éB
+						else if (migimuki == 1 &&
+							pos[enemyY2][enemyX2][1] + 20 + playerattackhanndou3B >= pos[playerY][playerX][1] + nanameidouY + nanameidouY2 + nanameidouY3 &&
+							pos[enemyY2][enemyX2][1] - 20 + playerattackhanndou3B <= pos[playerY][playerX][1] + nanameidouY + nanameidouY2 + nanameidouY3
+							&& pos[enemyY1][enemyX1][0] + playerattackhanndou + playerattackhanndou2 + playerattackhanndou3 >= pos[playerY][playerX][0] + nanameidouX + migiidou + nanameidouX2 + nanameidouX3
+							&& pos[enemyY1][enemyX1][0] + playerattackhanndou + playerattackhanndou2 + playerattackhanndou3 >= pos[enemyY2][enemyX2][0] + playerattackhanndouB + playerattackhanndou2B + playerattackhanndou3B
+							&& pos[playerY][playerX][0] + nanameidouX + migiidou + nanameidouX2 + nanameidouX3 <= pos[enemyY2][enemyX2][0] + playerattackhanndouB + playerattackhanndou2B + playerattackhanndou3B
+							)
+						{
+							tyokusennkougeki = 4;
+
+							if (tyokusennkougeki == 4) {
+								AGenemysabunHP = 40;//Ô‚¢•‚Ì“G2‚Ìƒ_ƒ[ƒW
+								kougekiKANOU = 10;
+								point = 123;
+							}
+						}
+
+						//Y²‚Í“G2
+						//X²‚ªålŒöƒ“G1ƒ“G2‚Ì‡‚É‘‚©‚ê‚Ä‚¢‚éB
+						else if (migimuki == 1 &&
+							pos[enemyY2][enemyX2][1] + 20 + playerattackhanndou3B >= pos[playerY][playerX][1] + nanameidouY + nanameidouY2 + nanameidouY3 &&
+							pos[enemyY2][enemyX2][1] - 20 + playerattackhanndou3B <= pos[playerY][playerX][1] + nanameidouY + nanameidouY2 + nanameidouY3 &&
+							pos[enemyY2][enemyX2][1] + playerattackhanndou3B > pos[enemyY1][enemyX1][1] + playerattackhanndou3 - 100
+							&& pos[enemyY1][enemyX1][0] + playerattackhanndou + playerattackhanndou2 + playerattackhanndou3 >= pos[playerY][playerX][0] + nanameidouX + migiidou + nanameidouX2 + nanameidouX3
+							&& pos[enemyY1][enemyX1][0] + playerattackhanndou + playerattackhanndou2 + playerattackhanndou3 <= pos[enemyY2][enemyX2][0] + playerattackhanndouB + playerattackhanndou2B + playerattackhanndou3B
+							&& pos[playerY][playerX][0] + nanameidouX + migiidou + nanameidouX2 + nanameidouX3 <= pos[enemyY2][enemyX2][0] + playerattackhanndouB + playerattackhanndou2B + playerattackhanndou3B
+							)
+						{
+
+
+							AGenemysabunHP = 40;//Ô‚¢•‚Ì“G2‚Ìƒ_ƒ[ƒW
+							kougekiKANOU = 10;
+							point = 734;
+
+						}
+
+						//Y²‚Í“G2
+						//X²‚ªålŒöƒ“G2ƒ“G1‚Ì‡‚É‘‚©‚ê‚Ä‚¢‚éB
+						else if (migimuki == 1 &&
+							pos[enemyY2][enemyX2][1] + 20 + playerattackhanndou3B >= pos[playerY][playerX][1] + nanameidouY + nanameidouY2 + nanameidouY3 &&
+							pos[enemyY2][enemyX2][1] - 20 + playerattackhanndou3B <= pos[playerY][playerX][1] + nanameidouY + nanameidouY2 + nanameidouY3
+							&& pos[enemyY1][enemyX1][0] + playerattackhanndou + playerattackhanndou2 + playerattackhanndou3 >= pos[playerY][playerX][0] + nanameidouX + migiidou + nanameidouX2 + nanameidouX3
+							&& pos[enemyY1][enemyX1][0] + playerattackhanndou + playerattackhanndou2 + playerattackhanndou3 >= pos[enemyY2][enemyX2][0] + playerattackhanndouB + playerattackhanndou2B + playerattackhanndou3B
+							&& pos[playerY][playerX][0] + nanameidouX + migiidou + nanameidouX2 + nanameidouX3 <= pos[enemyY2][enemyX2][0] + playerattackhanndouB + playerattackhanndou2B + playerattackhanndou3B
+							)
+						{
+
+
+							AGenemysabunHP = 40;//Ô‚¢•‚Ì“G2‚Ìƒ_ƒ[ƒW
+							kougekiKANOU = 10;
+							point = 780;
+
+						}
+
+
+						//Y²‚Í“G2‚É‚µ‚ÄA
+						//X²‚ªålŒöƒ“G2ƒ“G1‚Ì‡‚É‘‚©‚ê‚Ä‚¢‚éB
+						/*else if (migimuki == 1
+						&& pos[enemyY2][enemyX2][1] + 20 + playerattackhanndou3B >= pos[playerY][playerX][1] + nanameidouY + nanameidouY2 + nanameidouY3 &&
+						pos[enemyY2][enemyX2][1] - 20 + playerattackhanndou3B <= pos[playerY][playerX][1] + nanameidouY + nanameidouY2 + nanameidouY3
+						&& pos[enemyY1][enemyX1][0] + playerattackhanndou + playerattackhanndou2 + playerattackhanndou3 >= pos[playerY][playerX][0] + nanameidouX + migiidou + nanameidouX2 + nanameidouX3 - 15
+						&& pos[enemyY1][enemyX1][0] + playerattackhanndou + playerattackhanndou2 + playerattackhanndou3 >= pos[enemyY2][enemyX2][0] + playerattackhanndouB + playerattackhanndou2B + playerattackhanndou3B
+						&& pos[playerY][playerX][0] + nanameidouX + migiidou + nanameidouX2 + nanameidouX3 <= pos[enemyY2][enemyX2][0] + playerattackhanndouB + playerattackhanndou2B + playerattackhanndou3B
+						)
+						{
+
+						kougekiKANOU = 10;
+						AGenemysabunHP = 40;
+						point = 180;
+
+						}*/
+
+
+
+
+						//ššˆÈ‰º‚Ì“ñ‚Â‚ÌƒvƒƒOƒ‰ƒ€‚Í“G1‚Æ“G2‚ª“¯‚¶Y²‚É‹‚é‚Ì‚½‚ß‚Ì•¨‚Å‚ ‚éB‚à‚¿‚ë‚ñã‚Ì‚æ‚¤‚Éã‚Ì‚æ‚¤‚É
+						//ê‡•ª‚¯‚É“G1‚Æ“G2‚ÌY²‚ğ¬‡‚µ‚½•s“™®‚ğã‚Ìif•¶‚É‰Á‚¦‚ê‚Î—Ç‚¢‚ªŒ©‚É‚­‚­‚Ä‚ß‚ñ‚Ç‚­‚³‚¢‚Ì‚ÅˆÈ‰º‚Ì‚æ‚¤‚É“ñ‚Âì‚Á‚½B
+
+						//šã‚ÌƒvƒƒOƒ‰ƒ€‚ª•K—v‚È‚Ì‚ÍXÀ•W‚É‚¨‚¢‚ÄålŒöA“G1A“G2‚Ì‡”Ô‚ğl—¶‚·‚é‚½‚ßB
+						//‚±‚ÌƒvƒƒOƒ‰ƒ€‚Í“G2‚Ì‡”Ô‚ğ‹C‚É‚¹‚¸‚É“G1‚¾‚¯‚ğl—¶‚·‚ê‚Î‚æ‚¢‚½‚ß‘‚¢‚½B
+						//ˆÈ‰º‚Í“G1‚ğ‰EŒü‚«‚©‚çŒ‚‚Â‚½‚ß‚ÌƒvƒƒOƒ‰ƒ€B
+							//Y²‚Í“G1‚É‚µ‚ÄA
+							//X²‚ªålŒöƒ“G1‚Ì‡‚É‘‚©‚ê‚Ä‚¢‚éB//“G2‚ª‚Ç‚±‚É‹‚Ä‚àAãÎ‚ß‚â‰ºÎ‚ß‚É‚¢‚é‚æ‚¤‚È‚Å‚Ì”ÍˆÍƒvƒƒOƒ‰ƒ€B
+						else if (migimuki == 1 && pos[enemyY1][enemyX1][1] + 20 + playerattackhanndou3 >= pos[playerY][playerX][1] + nanameidouY + nanameidouY2 + nanameidouY3 &&
+							pos[enemyY1][enemyX1][1] - 20 + playerattackhanndou3 <= pos[playerY][playerX][1] + nanameidouY + nanameidouY2 + nanameidouY3
+							&& pos[enemyY1][enemyX1][0] + playerattackhanndou + playerattackhanndou2 + playerattackhanndou3 >= pos[playerY][playerX][0] + nanameidouX + migiidou + nanameidouX2 + nanameidouX3 - 15
+							)
+						{
+							tyokusennkougeki = 6;
+
+							if (tyokusennkougeki == 6) {
+								kougekiKANOU = 10;
+								GenemysabunHP = 40;
+								point = 157;
+							}
+						}
+
+
+
+
+						//šã‚ÌƒvƒƒOƒ‰ƒ€‚ª•K—v‚È‚Ì‚ÍXÀ•W‚É‚¨‚¢‚ÄålŒöA“G1A“G2‚Ì‡”Ô‚ğl—¶‚·‚é‚½‚ßB
+						//‚±‚ÌƒvƒƒOƒ‰ƒ€‚Í“G1‚Ì‡”Ô‚ğ‹C‚É‚¹‚¸‚É“G2‚¾‚¯‚ğl—¶‚·‚ê‚Î‚æ‚¢‚½‚ß‘‚¢‚½B
+						// 
+					//ˆÈ‰º‚Í“G2‚ğ‰EŒü‚«‚©‚çŒ‚‚Â‚½‚ß‚ÌƒvƒƒOƒ‰ƒ€B
+						//Y²‚Í“G2‚É‚µ‚ÄA
+						//X²‚ªålŒöƒ“G2‚Ì‡‚É‘‚©‚ê‚Ä‚¢‚éB//“G‚P‚ª‚Ç‚±‚É‹‚Ä‚àAãÎ‚ß‚â‰ºÎ‚ß‚É‚¢‚é‚æ‚¤‚È‚Å‚Ì”ÍˆÍƒvƒƒOƒ‰ƒ€B
+						else if (migimuki == 1
+							&& pos[enemyY2][enemyX2][1] + 20 + playerattackhanndou3B >= pos[playerY][playerX][1] + nanameidouY + nanameidouY2 + nanameidouY3 &&
+							pos[enemyY2][enemyX2][1] - 20 + playerattackhanndou3B <= pos[playerY][playerX][1] + nanameidouY + nanameidouY2 + nanameidouY3
+							&& pos[enemyY2][enemyX2][0] + playerattackhanndouB + playerattackhanndou2B + playerattackhanndou3B >= pos[playerY][playerX][0] + nanameidouX + migiidou + nanameidouX2 + nanameidouX3 - 15
+							)
+						{
+							tyokusennkougeki = 6;
+
+							if (tyokusennkougeki == 6) {
+								kougekiKANOU = 10;
+								AGenemysabunHP = 40;
+								point = 137;
+							}
+						}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+						//š«‚±‚±‚©‚ç‚Í¶Œü‚«‚Å‚Ì“G2‚ÌY²‚Æ“G1‚ÌY²‚ÌålŒö‚ª“G2‚Éƒ_ƒ[ƒW‚ğ—^‚¦‚é•”•ª‚É‚È‚éB
+						//’·‚¢if•¶‚Í“G1‚â“G2‚ğ‚Ü‚½‚¢‚ÅUŒ‚‚µ‚ÄƒŠAŠÑ’Ê‚µ‚Ä‚Ó‚½‚è‚Ì“G‚ÉUŒ‚‚µ‚È‚¢‚æ‚¤‚É‚µ‚½‚èA“¯‚¶Y²‚É‚Ó‚½‚è“G‚ª‚¢‚é‚É
+						//ålŒö‚ÌŒü‚­•ûŒü‚Ì“G‚¾‚¯‚ÉUŒ‚‚ğ“–‚Ä‚ê‚é‚æ‚¤‚É‚·‚é‚½‚ß‚ÌƒvƒƒOƒ‰ƒ€‚Å‚ ‚éB
+
+
+
+
+
+
+
+
+
+
+						//ššˆÈ‰º‚Ì“ñ‚Â‚Ìif•¶‚ÍålŒö‚Æ“G‚PA“G2‚Æ“¯‚¶Y²‚É‚¢‚é‚Æ‚µ‚ÄA“G2‚¾‚¯‚ğUŒ‚‚·‚éƒvƒƒOƒ‰ƒ€B
+				//tyokusennkougeki = 3;‚Ætyokusennkougeki = 4;‚ÌƒvƒƒOƒ‰ƒ€‚ÍålŒö‚Æ“G1‚Æ“G2‚ª“¯‚¶Y²‚É‹‚é‚Ìe‚Ì”ÍˆÍ‚ÌƒvƒƒOƒ‰ƒ€B
+				//tyokusennkougeki = 3;‚Í“G2‚É¶Œü‚«‚ÅUŒ‚Atyokusennkougeki = 4‚Í¶Œü‚«‚É“G1‚ğUŒ‚B
+				//ã“ñ‚Â‚ÉŒq‚ª‚éƒvƒƒOƒ‰ƒ€‚É‚à¶Œü‚«‚ÌUŒ‚‚Í‚ ‚é‚ªA‚±‚±‚Í‚½‚¾‚Ì¶Œü‚«‚ÌUŒ‚‚Å‚Í‚È‚­A
+				// 
+				// ˆÈ‰º‚Í“G2‚Æ“G1‚ğ¶Œü‚«‚©‚çŒ‚‚Â‚½‚ß‚ÌƒvƒƒOƒ‰ƒ€B
+				//Y²‚Ì”í‚Á‚½“G1‚Æ“G2‚ğ‹­’²‚µ‚½•”•ª‚È‚Ì‚¾B
+
+
+
+						 //Y²‚Í“G2‚É‚µ‚ÄA
+						//“G2ƒålŒöƒ“G1‚Ì‡‚É‘‚©‚ê‚Ä‚¢‚éƒvƒƒOƒ‰ƒ€B
+						if (hidarimuki == 1 && pos[enemyY2][enemyX2][1] + 20 + playerattackhanndou3B >= pos[playerY][playerX][1] + nanameidouY + nanameidouY2 + nanameidouY3 &&
+							pos[enemyY2][enemyX2][1] - 20 + playerattackhanndou3B <= pos[playerY][playerX][1] + nanameidouY + nanameidouY2 + nanameidouY3
+							&& pos[enemyY1][enemyX1][0] + playerattackhanndou + playerattackhanndou2 + playerattackhanndou3 >= pos[playerY][playerX][0] + nanameidouX + migiidou + nanameidouX2 + nanameidouX3
+							&& pos[enemyY1][enemyX1][0] + playerattackhanndou + playerattackhanndou2 + playerattackhanndou3 >= pos[enemyY2][enemyX2][0] + playerattackhanndouB + playerattackhanndou2B + playerattackhanndou3B
+							&& pos[playerY][playerX][0] + nanameidouX + migiidou + nanameidouX2 + nanameidouX3 >= pos[enemyY2][enemyX2][0] + playerattackhanndouB + playerattackhanndou2B + playerattackhanndou3B
+							)
+						{
+							tyokusennkougeki = 3;
+
+							if (tyokusennkougeki == 3) {
+								kougekiKANOU = 10;
+								AGenemysabunHP = 40;
+								point = 120;
+
+
+							}
+						}
+						//ššålŒö‚Æ“G‚PA“G2‚Æ“¯‚¶Y²‚É‚¢‚é‚Æ‚µ‚ÄA“G2‚¾‚¯‚ğUŒ‚‚·‚éƒvƒƒOƒ‰ƒ€B
+						//tyokusennkougeki = 3;‚Ætyokusennkougeki = 4;‚ÌƒvƒƒOƒ‰ƒ€‚ÍålŒö‚Æ“G1‚Æ“G2‚ª“¯‚¶Y²‚É‹‚é‚Ìe‚Ì”ÍˆÍ‚ÌƒvƒƒOƒ‰ƒ€B
+						//tyokusennkougeki = 3;‚Í“G2‚É¶Œü‚«‚ÅUŒ‚Atyokusennkougeki = 4‚Í¶Œü‚«‚É“G1‚ğUŒ‚B
+						//ã“ñ‚Â‚ÉŒq‚ª‚éƒvƒƒOƒ‰ƒ€‚É‚à¶Œü‚«‚ÌUŒ‚‚Í‚ ‚é‚ªA‚±‚±‚Í‚½‚¾‚Ì¶Œü‚«‚ÌUŒ‚‚Å‚Í‚È‚­A
+						//Y²‚Ì”í‚Á‚½“G1‚Æ“G2‚ğ‹­’²‚µ‚½•”•ª‚È‚Ì‚¾B
+						//Y²‚Í“G‚Q
+						//¶Œü‚«‚ÅX²‚Í‚Pƒ‚Qƒå‚Æ‚È‚Á‚Ä‚¢‚éB
+						else if (hidarimuki == 1 &&
+							pos[enemyY2][enemyX2][1] + 20 + playerattackhanndou3B >= pos[playerY][playerX][1] + nanameidouY + nanameidouY2 + nanameidouY3 &&
+							pos[enemyY2][enemyX2][1] - 20 + playerattackhanndou3B <= pos[playerY][playerX][1] + nanameidouY + nanameidouY2 + nanameidouY3 &&
+							pos[enemyY1][enemyX1][0] + playerattackhanndou + playerattackhanndou2 + playerattackhanndou3 <= pos[playerY][playerX][0] + nanameidouX + migiidou + nanameidouX2 + nanameidouX3
+							&& pos[enemyY1][enemyX1][0] + playerattackhanndou + playerattackhanndou2 + playerattackhanndou3 <= pos[enemyY2][enemyX2][0] + playerattackhanndouB + playerattackhanndou2B + playerattackhanndou3B
+							&& pos[playerY][playerX][0] + nanameidouX + migiidou + nanameidouX2 + nanameidouX3 >= pos[enemyY2][enemyX2][0] + playerattackhanndouB + playerattackhanndou2B + playerattackhanndou3B
+							)
+						{
+							tyokusennkougeki = 3;
+
+							if (tyokusennkougeki == 3) {
+								kougekiKANOU = 10;
+								AGenemysabunHP = 40;
+								point = 345;
+							}
+						}
+
+
+
+
+
+
+
+						//Y²‚Í“G1‚É‚µ‚ÄA
+						//X²‚ª“G2ƒ“G1ƒålŒö‚Ì‡‚É‘‚©‚ê‚Ä‚¢‚éB
+						else  if (hidarimuki == 1 && pos[enemyY1][enemyX1][1] + 20 + playerattackhanndou3 >= pos[playerY][playerX][1] + nanameidouY + nanameidouY2 + nanameidouY3 &&
+							pos[enemyY1][enemyX1][1] - 20 + playerattackhanndou3 <= pos[playerY][playerX][1] + nanameidouY + nanameidouY2 + nanameidouY3
+							&& pos[enemyY1][enemyX1][0] + playerattackhanndou + playerattackhanndou2 + playerattackhanndou3 <= pos[playerY][playerX][0] + nanameidouX + migiidou + nanameidouX2 + nanameidouX3
+							&& pos[enemyY1][enemyX1][0] + playerattackhanndou + playerattackhanndou2 + playerattackhanndou3 >= pos[enemyY2][enemyX2][0] + playerattackhanndouB + playerattackhanndou2B + playerattackhanndou3B
+							&& pos[playerY][playerX][0] + nanameidouX + migiidou + nanameidouX2 + nanameidouX3 >= pos[enemyY2][enemyX2][0] + playerattackhanndouB + playerattackhanndou2B + playerattackhanndou3B
+							)
+						{
+							tyokusennkougeki = 4;
+
+							if (tyokusennkougeki == 4) {
+								kougekiKANOU = 10;
+								GenemysabunHP = 40;
+								point = 187;
+							}
+						}
+						//Y²‚Í“G1‚É‚µ‚ÄA
+						//X²‚ª“G1ƒålŒöƒ“G2‚Ì‡‚É‘‚©‚ê‚Ä‚¢‚éB
+						else  if (hidarimuki == 1 && pos[enemyY1][enemyX1][1] + 20 + playerattackhanndou3 >= pos[playerY][playerX][1] + nanameidouY + nanameidouY2 + nanameidouY3 &&
+							pos[enemyY1][enemyX1][1] - 20 + playerattackhanndou3 <= pos[playerY][playerX][1] + nanameidouY + nanameidouY2 + nanameidouY3
+							&& pos[enemyY1][enemyX1][0] + playerattackhanndou + playerattackhanndou2 + playerattackhanndou3 <= pos[playerY][playerX][0] + nanameidouX + migiidou + nanameidouX2 + nanameidouX3
+							&& pos[enemyY1][enemyX1][0] + playerattackhanndou + playerattackhanndou2 + playerattackhanndou3 <= pos[enemyY2][enemyX2][0] + playerattackhanndouB + playerattackhanndou2B + playerattackhanndou3B
+							&& pos[playerY][playerX][0] + nanameidouX + migiidou + nanameidouX2 + nanameidouX3 <= pos[enemyY2][enemyX2][0] + playerattackhanndouB + playerattackhanndou2B + playerattackhanndou3B
+							)
+						{
+							tyokusennkougeki = 4;
+
+							if (tyokusennkougeki == 4) {
+								kougekiKANOU = 10;
+								GenemysabunHP = 40;
+								point = 1;
+							}
+						}
+
+						//Y²‚Í“G1‚É‚µ‚ÄA
+						//1ƒ2ƒå
+						else if (hidarimuki == 1 &&
+							pos[enemyY1][enemyX1][1] + 20 + playerattackhanndou3B >= pos[playerY][playerX][1] + nanameidouY + nanameidouY2 + nanameidouY3 &&
+							pos[enemyY1][enemyX1][1] - 20 + playerattackhanndou3B <= pos[playerY][playerX][1] + nanameidouY + nanameidouY2 + nanameidouY3 &&
+							pos[enemyY1][enemyX1][0] + playerattackhanndou + playerattackhanndou2 + playerattackhanndou3 <= pos[playerY][playerX][0] + nanameidouX + migiidou + nanameidouX2 + nanameidouX3
+							&& pos[enemyY1][enemyX1][0] + playerattackhanndou + playerattackhanndou2 + playerattackhanndou3 <= pos[enemyY2][enemyX2][0] + playerattackhanndouB + playerattackhanndou2B + playerattackhanndou3B
+							&& pos[playerY][playerX][0] + nanameidouX + migiidou + nanameidouX2 + nanameidouX3 >= pos[enemyY2][enemyX2][0] + playerattackhanndouB + playerattackhanndou2B + playerattackhanndou3B
+							)
+						{
+							tyokusennkougeki = 3;
+
+							if (tyokusennkougeki == 3) {
+								kougekiKANOU = 10;
+								GenemysabunHP = 40;
+								point = 676;
+							}
+						}
+
+
+
+						//šã‚ÌƒvƒƒOƒ‰ƒ€‚ª•K—v‚È‚Ì‚ÍXÀ•W‚É‚¨‚¢‚ÄålŒöA“G1A“G2‚Ì‡”Ô‚ğl—¶‚·‚é‚½‚ßB
+						//‚±‚ÌƒvƒƒOƒ‰ƒ€‚Í“G2‚Ì‡”Ô‚ğ‹C‚É‚¹‚¸‚É“G1‚¾‚¯‚ğl—¶‚·‚ê‚Î‚æ‚¢‚½‚ß‘‚¢‚½B
+						//ˆÈ‰º‚Í“G1‚ğ‰EŒü‚«‚©‚çŒ‚‚Â‚½‚ß‚ÌƒvƒƒOƒ‰ƒ€B
+							//Y²‚Í“G1‚É‚µ‚ÄA
+							//X²‚ªålŒö>“G1‚Ì‡‚É‘‚©‚ê‚Ä‚¢‚éB//“G2‚ª‚Ç‚±‚É‹‚Ä‚àAãÎ‚ß‚â‰ºÎ‚ß‚É‚¢‚é‚æ‚¤‚È‚Å‚àUŒ‚‰Â”\‚È”ÍˆÍƒvƒƒOƒ‰ƒ€B
+						/*if (hidarimuki == 1 && pos[enemyY1][enemyX1][1] + 20 + playerattackhanndou3 >= pos[playerY][playerX][1] + nanameidouY + nanameidouY2 + nanameidouY3 &&
+							pos[enemyY1][enemyX1][1] - 20 + playerattackhanndou3 >= pos[playerY][playerX][1] + nanameidouY + nanameidouY2 + nanameidouY3
+							&& pos[playerY][playerX][0] + nanameidouX + migiidou + nanameidouX2 + nanameidouX3 >= pos[enemyY1][enemyX1][0] + playerattackhanndou + playerattackhanndou2 + playerattackhanndou3
+							)
+						{
+							tyokusennkougeki = 5;
+
+							if (tyokusennkougeki == 5) {
+								kougekiKANOU = 10;
+								GenemysabunHP = 40;
+								point = 191;
+
+
+							}
+
+						}
+
+						//šã‚ÌƒvƒƒOƒ‰ƒ€‚ª•K—v‚È‚Ì‚ÍXÀ•W‚É‚¨‚¢‚ÄålŒöA“G1A“G2‚Ì‡”Ô‚ğl—¶‚·‚é‚½‚ßB
+						//‚±‚ÌƒvƒƒOƒ‰ƒ€‚Í“G2‚Ì‡”Ô‚ğ‹C‚É‚¹‚¸‚É“G1‚¾‚¯‚ğl—¶‚·‚ê‚Î‚æ‚¢‚½‚ß‘‚¢‚½B
+						//ˆÈ‰º‚Í“G1‚ğ‰EŒü‚«‚©‚çŒ‚‚Â‚½‚ß‚ÌƒvƒƒOƒ‰ƒ€B
+							//Y²‚Í“G2‚É‚µ‚ÄA
+							//X²‚ªålŒö>“G2‚Ì‡‚É‘‚©‚ê‚Ä‚¢‚éB//“G1‚ª‚Ç‚±‚É‹‚Ä‚àAãÎ‚ß‚â‰ºÎ‚ß‚É‚¢‚é‚æ‚¤‚È‚ÅUŒ‚‰Â”\‚È”ÍˆÍƒvƒƒOƒ‰ƒ€B
+						else if (hidarimuki == 1 && pos[enemyY2][enemyX2][1] + 20 + playerattackhanndou3B >= pos[playerY][playerX][1] + nanameidouY + nanameidouY2 + nanameidouY3 &&
+							pos[enemyY2][enemyX2][1] - 20 + playerattackhanndou3B >= pos[playerY][playerX][1] + nanameidouY + nanameidouY2 + nanameidouY3
+							&& pos[playerY][playerX][0] + nanameidouX + migiidou + nanameidouX2 + nanameidouX3 >= pos[enemyY2][enemyX2][0] + playerattackhanndouB + playerattackhanndou2B + playerattackhanndou3B
+							)
+						{
+							tyokusennkougeki = 5;
+
+							if (tyokusennkougeki == 5) {
+								kougekiKANOU = 10;
+								AGenemysabunHP = 40;
+								point = 130;
+
+
+							}
+
+						}*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1946,7 +2384,7 @@ void Player_Update2() {
 			lockonMove = 1;
 		}
 
-
+		
 
 		if (lock == 1) {
 			if ((GetJoypadInputState(DX_INPUT_PAD1) & PAD_INPUT_RIGHT) == 0) { //ƒL[‚ğ“ü—Í‚·‚éˆÈŠO‚É‚à‰Ÿ‚µ‚½Œã‚É‘‚­‰æ‘œ‚ğØ‚è‘Ö‚¦‚Ä‘«“¥‚İ‚·‚é‚æ‚¤‚É‚·‚é‚½‚ß‚É‰Šú’l‚É‚à1‚Í‚ ‚é‚ªƒL[‚É‚àplayerMove=1‚ğ‘‚¢‚½‚èAƒL[‚ğ‰Ÿ‚µ‚½‚ç‚Ç‚¤‚µ‚½‚¢‚©‚ğ‚·‚é‚½‚ß‚ÉplayerX++‚ğ‘‚¢‚Ä‚¢‚éB

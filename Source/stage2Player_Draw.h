@@ -2627,7 +2627,7 @@ void stage2PlayerDraw() {
 		}
 		//もう一人の敵を描画
 		if (stayherelock2 == 0) {
-			if (anotherenemyzannzoulock == 1) {//カウンターを食らった際に主人公がアナログパッドで初期位置に戻ると敵の残像が0になる。
+			if (anotherenemyzannzoulock == 0) {//カウンターを食らった際に主人公がアナログパッドで初期位置に戻ると敵の残像が0になる。
 				//そうするとカウンターを食らってる最中なのに敵の画像が描画されてしまう。なので、enemyhirumaseframe == 0を付け足した。
 				//多分if (enemyzannzoulockframe > 25)で主人公の攻撃によって早くenemyzannzoulockが0になってしまうのだと思う。
 

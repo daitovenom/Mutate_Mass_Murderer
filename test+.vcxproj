@@ -153,30 +153,25 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include=".h" />
-    <ClInclude Include="aruku.h" />
-    <ClInclude Include="countine.h" />
-    <ClInclude Include="kasurikougeki.h" />
-    <ClInclude Include="key.h" />
-    <ClInclude Include="playerhensuuVr2.h" />
-    <ClInclude Include="sennkounyuuryokujyuujiki.h" />
-    <ClInclude Include="settoku.h" />
-    <ClInclude Include="settoku2.h" />
-    <ClInclude Include="Source\stage2Player_Draw.h" />
-    <ClInclude Include="stage1Player_Draw.h" />
-    <ClInclude Include="stgae1Player_Update.h" />
-    <ClInclude Include="stgae2Player_Update.h" />
-    <ClInclude Include="suraidoidoubyouga.h" />
-    <ClInclude Include="syuzinkoukougekigazou.h" />
-    <ClInclude Include="syuzinnkouDAMEGIjyoutai.h" />
-    <ClInclude Include="syuzinnkouKENJYUU.h" />
-    <ClInclude Include="syuzinnkouKOUGEKI.h" />
-    <ClInclude Include="taitol.h" />
-    <ClInclude Include="talk.h" />
-    <ClInclude Include="UEsuraido.h" />
+    <ClCompile Include="Source\testgame2023+.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Source\testgame2023+.cpp" />
+    <ClInclude Include="Source\countine.h" />
+    <ClInclude Include="Source\kasurikougeki.h" />
+    <ClInclude Include="Source\key.h" />
+    <ClInclude Include="Source\sennkounyuuryokujyuujiki.h" />
+    <ClInclude Include="Source\settoku.h" />
+    <ClInclude Include="Source\settoku2.h" />
+    <ClInclude Include="Source\stage1Player_Draw.h" />
+    <ClInclude Include="Source\stage2Player_Draw.h" />
+    <ClInclude Include="Source\stgae1Player_Update.h" />
+    <ClInclude Include="Source\stgae2Player_Update.h" />
+    <ClInclude Include="Source\suraidoidoubyouga.h" />
+    <ClInclude Include="Source\syuzinkoukougekigazou.h" />
+    <ClInclude Include="Source\syuzinnkouKENJYUU.h" />
+    <ClInclude Include="Source\taitol.h" />
+    <ClInclude Include="Source\talk.h" />
+    <ClInclude Include="Source\UEsuraido.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

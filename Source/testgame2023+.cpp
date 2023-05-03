@@ -126,7 +126,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int nCmdShow)
 
 
 	//右向き
-	LoadDivGraph("playersyuzinnkoukuronuriKAIZOU6.bmp", 3, 3, 1, 20, 33, playerGHandle);
+	LoadDivGraph("Assets/image/playersyuzinnkoukuronuriKAIZOU6.bmp", 3, 3, 1, 20, 33, playerGHandle);
 
 	//左向き
 	LoadDivGraph("playersyuzinnkoukuronuriKAIZOU6a.bmp", 3, 3, 1, 20, 33, playerHandle2);
