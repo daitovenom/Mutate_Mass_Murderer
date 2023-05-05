@@ -4,11 +4,44 @@
 
 //ƒRƒ“ƒXƒgƒ‰ƒNƒ^ = Å‰‚ÉŸè‚Éâ‘ÎŒÄ‚Ñ‚¾‚³‚ê‚é
 Game::Game() {
+
+
 	//‰Šú‰»
-	stage[4][7][2];  // ”Õã‚Ìƒ}ƒX‚ÌŠiq“_‚ÌÀ•W
+	//stage[4][7][2];  // ”Õã‚Ìƒ}ƒX‚ÌŠiq“_‚ÌÀ•W
+
+	/*
+	* ˆêT–Ú
+	stage[0][0][0];
+	stage[0][0][1];
+	“ñT–Ú
+	stage[0][1][0];
+	stage[0][1][1];
+	stage[0][2][0];
+	stage[0][2][1];
+	stage[0][3][0];
+	stage[0][3][1];
+	//....
+	OT–Ú
+	stage[1][1][0];
+	stage[1][1][1];
+	stage[1][2][0];
+	stage[1][2][1];
+	stage[1][3][0];
+	stage[1][3][1];
+	//.....
+	*/
+
+	for (int i = 0; i <4; i++) {
+		for (int j = 0; j < 7; j++) {
+			for (int k = 0; k < 2; k++) {
+				stage[i][j][k] = -1;
+			}
+		}
+	}
+
+
 	pos[3][6][2];    // ƒLƒƒƒ‰•`‰æÀ•W
-	i;
-	j;
+
 	// !!!!‰J‚ğ~‚ç‚·‰‰o
 	rain_power;			// —Ê
 	rain_hairetsu[100][6];	// ”z—ñ
@@ -27,17 +60,28 @@ Game::Game() {
 	function_status;//í“¬‰æ–Ê’†‚Í1‚Æ‚·‚é‚½‚ß‚Ì•Ï”function_status‚Ì’è‹`
 
 
+	//========================================================================
+	lockonHandle[0] = -1;
+	lockonHandle[1] = -1;
+	lockonHandle[2] = -1;
 
-	lockonHandle[3] = { -1};
-	enemyGHandle[4] = -1;   // “G‚ÌƒOƒ‰ƒtƒBƒbƒNƒnƒ“ƒhƒ‹Ši”[—p”z—ñ
-	playerGHandle[8] = -1;  // ‰´‚ÌƒOƒ‰ƒtƒBƒbƒNƒnƒ“ƒhƒ‹Ši”[—p”z—ñ
-	kikennhanndle[12] = -1;
+	for (int i = 0; i < sizeof(enemyGHandle) / sizeof(int) -1; i++) {
+		enemyGHandle[i] = -1;
+	}
+	for (int i = 0; i < sizeof(playerGHandle) / sizeof(int) - 1; i++) {
+		playerGHandle[i] = -1;
+	}
+	for (int i = 0; i < sizeof(kikennhanndle) / sizeof(int) - 1; i++) {
+		kikennhanndle[i] = -1;
+	}
+
+
 	// 0-2:Œã‚ëŒü‚«A3-5:‰EŒü‚«A6-8:‘OŒü‚«A9-11:¶Œü‚«
 	hartmarkhanndle[3] = -1;
 	bloodGHandle[3] = -1;
 	MovieGraphHandle = -1;//”wŒi‚Ìgif‚Ì‚½‚ß‚Ì•Ï”
 	anarogunoizuGraphHandle;
-	testplayerGHandle[1] = -1;
+	testplayerGHandle[0] = -1;
 
 	enemyImage;    // “G ¶Œü‚« ‰Šú’l‚Å‚ÌenemyImage‚ÉenemyGHandle[3]‚ª“ü‚Á‚Ä‚é‚¾‚¯‚ÅAğŒ‚É‚æ‚Á‚Ä‚ÍenemyGHandle[3]‚àˆÓŠO‚à“ü‚éB
 	playerImage;   // ‰´ ‰EŒü‚«//šã‚Åuint playerGHandle[8];  // ‰´‚ÌƒOƒ‰ƒtƒBƒbƒNƒnƒ“ƒhƒ‹Ši”[—p”z—ñv‚Æ’è‹`‚µ‚ÄA
@@ -59,17 +103,17 @@ Game::Game() {
 	//ålŒö‚ÌUŒ‚‚ğ•\‚·‰æ‘œ‚ğ§Œä‚·‚é‚½‚ß‚Ì•Ï”
 
 	playernaguruImage;
-	playernaguruAGHandle[1] = -1;
-	playernaguruBGHandle[1] = -1;
+	playernaguruAGHandle[0] = -1;
+	playernaguruBGHandle[0] = -1;
 	playertabakoImage;
-	playertabakoAHandle[1] = -1;
-	playertabakoBHandle[1] = -1;
-	playertabakoCHandle[1] = -1;
-	playertabakoDHandle[1] = -1;
-	playeridouAHandle[1] = -1;
+	playertabakoAHandle[0] = -1;
+	playertabakoBHandle[0] = -1;
+	playertabakoCHandle[0] = -1;
+	playertabakoDHandle[0] = -1;
+	playeridouAHandle[0] = -1;
 	playeridouImage;
-	playeridouA3Handle[1] = -1;
-	playerKONNBO1AHandle[1] = -1;
+	playeridouA3Handle[0] = -1;
+	playerKONNBO1AHandle[0] = -1;
 	playerKONNBO1AImage;
 	KONNBO1A;
 	playerKONNBO1BHandle[1] = -1;
@@ -126,26 +170,27 @@ Game::Game() {
 	STAGE2ENEMY1hirumiHandle[1] = -1;
 	STAGE2ENEMY2hirumiHandle[1] = -1;
 	STAGE2ENEMY1kougekiB1Handle[1] = -1;
-	enemy1KENJYUUHandle[2] = -1;
-	KATANA[1] = -1;
-	KATANA2[1] = -1;
-	KATANA3A[1] = -1;
-	KATANA3[1] = -1;
-	kikkuhanntenn[1] = -1;
-	playeridouA5Handle[1] = -1;
-	playergardGHandle[1] = -1;
-	playerdamegeGHandle[1] = -1;
-	enemy2damegeHandle[1] = -1;
-	enemy3damegeHandle[1] = -1;
+	enemy1KENJYUUHandle[0] = -1;
+	enemy1KENJYUUHandle[1] = -1;
+	KATANA[0] = -1;
+	KATANA2[0] = -1;
+	KATANA3A[0] = -1;
+	KATANA3[0] = -1;
+	kikkuhanntenn[0] = -1;
+	playeridouA5Handle[0] = -1;
+	playergardGHandle[0] = -1;
+	playerdamegeGHandle[0] = -1;
+	enemy2damegeHandle[0] = -1;
+	enemy3damegeHandle[0] = -1;
 	old_trailerHandle;
 	poleModel;
-	enemydamegeHandle[1] = -1;
+	enemydamegeHandle[0] = -1;
 	byouga;
 
 	//‰æ‘œ
 	dennwa;
 	firudoModel;
-	taitol2Handle[1];
+	taitol2Handle[0] = -1;
 	kodomogif;
 	stage2haikeiHandle;
 	taitolhaikeiHandle;
@@ -160,13 +205,19 @@ Game::Game() {
 	uearuku2gazou[1];
 	syuzinnkouyokerugazou[1];
 	syuzinnkouyokerugazou2[1];
-	playerHandle2[3];
-	playeridouAhidariHandle[1];
-	playeridouA4hidariHandle[1];
+	playerHandle2[0] = -1;
+	playerHandle2[1] = -1;
+	playerHandle2[2] = -1;
+	playeridouAhidariHandle[0] = -1;
+	playeridouA4hidariHandle[0] = -1;
 	playeridouA2hidariHandle[1];
 	playeridouA3hidariHandle[1];
 	playeridouA5hidariHandle[1];
-	playerKENJYUUhidari[5];
+	playerKENJYUUhidari[0] = -1;
+	playerKENJYUUhidari[1] = -1;
+	playerKENJYUUhidari[2] = -1;
+	playerKENJYUUhidari[3] = -1;
+	playerKENJYUUhidari[4] = -1;
 	playernaguruAGHandleB[1];
 	playernaguruBGHandleB[1];
 	playernaguruBGHandle2B[1];
@@ -194,43 +245,17 @@ bool Game::Init() {
 	//«šŠÖ”‚Åg‚¢‚½‚¢‰æ‘œ‚ğuŠÔ‚ÉŒÄ‚Ô‚Ì‚ÍŠÔ‚ª‚©‚©‚é‚µd‚¢‚Ì‚ÅƒƒCƒ“‚Ì’†‚ÉŠù‚ÉƒXƒ^ƒ“ƒo‚Á‚Ä‚¢‚éó‘Ô‚É‚·‚éB
 	SetTransColor(255, 255, 255); // “Ç‚İ‚Ş‰æ‘œ‚Ì‘O‚É‚±‚¢‚Â‚ğ’u‚­‚±‚Æ‚Å“§–¾‰»‚Å‚«‚éBƒ‹[ƒv“à‚É‚à‘‚¢‚Ä³‚µ‚­“®‚­‚ª–ˆ‰ñ“Ç‚İ‚Ş‚æ‚¤‚É‚È‚Á‚Ä‚µ‚Ü‚¤‚½‚ßˆ—‚ª’x‚­‚È‚éB
 
-	// ƒ€[ƒr[ƒtƒ@ƒCƒ‹‚ğƒ[ƒh‚µ‚Ü‚·
-
-	MovieGraphHandle = LoadGraph("Assets/180half_f.gif");
-
-	// ƒ€[ƒr[‚ğÄ¶ó‘Ô‚É‚µ‚Ü‚·
-	//PlayMovieToGraph(MovieGraphHandle);
-	// ƒ^ƒCƒgƒ‹‚Åo‚Ä‚­‚éƒ€[ƒr[ƒtƒ@ƒCƒ‹‚ğƒ[ƒh‚µ‚Ü‚·B
-	//taitolGraphHandle = LoadGraph("321000000_mmw227fw.gif");
-	// ƒ^ƒCƒgƒ‹‚Åo‚Ä‚­‚éƒ€[ƒr[‚ğÄ¶ó‘Ô‚É‚µ‚Ü‚·
-	PlayMovieToGraph(taitolGraphHandle);
-	//“G‚ªƒ_ƒ[ƒW‚ğó‚¯‚½‚ÌS‘Ÿ‚Ìƒ€[ƒr[ƒtƒ@ƒCƒ‹‚ğƒ[ƒh‚µ‚Ü‚·B
-
-
-	sinnzouGraphHandle = LoadGraph("Assets/original.gif");
-	// “G‚ªƒ_ƒ[ƒW‚ğó‚¯‚½‚ÌS‘Ÿ‚Ìƒ€[ƒr[‚ğÄ¶ó‘Ô‚É‚µ‚Ü‚·
-	PlayMovieToGraph(sinnzouGraphHandle);
-
-	// áƒ€[ƒr[ƒtƒ@ƒCƒ‹‚ğƒ[ƒh‚µ‚Ü‚·B
-	snowGraphHandle = LoadGraph("Assets/20160103081928.gif");
-	// áƒ€[ƒr[‚ğÄ¶ó‘Ô‚É‚µ‚Ü‚·
-	PlayMovieToGraph(snowGraphHandle);
-
-	// ƒAƒiƒƒOƒmƒCƒYƒ€[ƒr[ƒtƒ@ƒCƒ‹‚ğƒ[ƒh‚µ‚Ü‚·B
-	anarogunoizuGraphHandle = LoadGraph("Assets/MOSHED-2020-6-1-23-33-37.gif");
-	// ƒAƒiƒƒOƒmƒCƒYƒ€[ƒr[‚ğÄ¶ó‘Ô‚É‚µ‚Ü‚·
-	PlayMovieToGraph(anarogunoizuGraphHandle);
-
-	// ƒtƒ@ƒCƒ‹‚ğƒ[ƒh‚µ‚Ü‚·B
+	//ƒ[ƒh
+	MovieGraphHandle = LoadGraph("Assets/180half_f.gif");  //ƒ€[ƒr[
+	taitolGraphHandle = LoadGraph("321000000_mmw227fw.gif");  //ƒ^ƒCƒgƒ‹‚Åo‚Ä‚­‚éƒ€[ƒr[
+	sinnzouGraphHandle = LoadGraph("Assets/original.gif");  //“G‚ªƒ_ƒ[ƒW‚ğó‚¯‚½‚ÌS‘Ÿ‚Ìƒ€[ƒr[
+	snowGraphHandle = LoadGraph("Assets/20160103081928.gif");  //áƒ€[ƒr[
+	anarogunoizuGraphHandle = LoadGraph("Assets/MOSHED-2020-6-1-23-33-37.gif");  //ƒAƒiƒƒOƒmƒCƒYƒ€[ƒr
 	gimenHandle = LoadGraph("Assets/photo0000-3903.bmp");
-	PlayMovieToGraph(gimenHandle);
-
-	// ƒtƒ@ƒCƒ‹‚ğƒ[ƒh‚µ‚Ü‚·B
 	kodomogif = LoadGraph("Assets/kodomo.gif");
-	PlayMovieToGraph(kodomogif);
-	// ƒtƒ@ƒCƒ‹‚ğƒ[ƒh‚µ‚Ü‚·B
-	 //kaiwaHandle = OpenMovieToGraph("MOSHED-2020-6-2-19-11-5.gif");
 
+	// ƒtƒ@ƒCƒ‹‚ğƒ[ƒh‚µ‚Ü‚·B
+	//kaiwaHandle = OpenMovieToGraph("MOSHED-2020-6-2-19-11-5.gif");
 	//SeekMovieToGraph(kaiwaHandle, 0);
 	//PlayMovieToGraph(kaiwaHandle);
 
@@ -279,17 +304,15 @@ bool Game::Init() {
 	dennwa = LoadGraph("Assets/dennwa2.gif");
 	PlayMovieToGraph(dennwa);
 
-
-
 	//ƒ^ƒCƒgƒ‹‚Ì”wŒiB
 	taitolhaikeiHandle = LoadGraph("Assets/taitoruhaikei.gif");
 	PlayMovieToGraph(taitolhaikeiHandle);
 
-	if (MovieGraphHandle == -1 || sinnzouGraphHandle == -1 || snowGraphHandle == -1 || anarogunoizuGraphHandle == -1 ||
-		gimenHandle == -1 || kodomogif == -1 || dennwaHandle == -1 || enemytalk1Handle == -1 || enemytalk2Handle == -1|| 
-		enemytalk1Handle == -1 || SHOTHandle == -1 || vioraHandle == -1 || settokugamenntyuunohaikeiHandle || settoku1Handle == -1 || 
-		sentougoHandle == -1 || countimuHandle == -1 || stage1haikeiHandle == -1 || stage2haikeiHandle == -1 || dennwa == -1 || 
-		taitolhaikeiHandle == -1)  {
+	if (MovieGraphHandle == -1 || taitolGraphHandle == -1|| sinnzouGraphHandle == -1 || snowGraphHandle == -1 || 
+		anarogunoizuGraphHandle == -1 ||gimenHandle == -1 || kodomogif == -1 || dennwaHandle == -1 || enemytalk1Handle == -1 || 
+		enemytalk2Handle == -1|| enemytalk1Handle == -1 || SHOTHandle == -1 || vioraHandle == -1 || 
+		settokugamenntyuunohaikeiHandle || settoku1Handle == -1 || sentougoHandle == -1 || countimuHandle == -1 ||
+		stage1haikeiHandle == -1 || stage2haikeiHandle == -1 || dennwa == -1 || taitolhaikeiHandle == -1)  {
 		return false;
 	}
 
@@ -508,6 +531,15 @@ bool Game::Init() {
 
 	InitStage(); // stage, pos ‚Ì‰Šú‰»
 
+	//==============================================================
+
+	PlayMovieToGraph(MovieGraphHandle);  // ƒ€[ƒr[‚ğÄ¶ó‘Ô‚É‚µ‚Ü‚·
+	PlayMovieToGraph(taitolGraphHandle);  // ƒ^ƒCƒgƒ‹‚Åo‚Ä‚­‚éƒ€[ƒr[‚ğÄ¶ó‘Ô‚É‚µ‚Ü‚·
+	PlayMovieToGraph(sinnzouGraphHandle);  // “G‚ªƒ_ƒ[ƒW‚ğó‚¯‚½‚ÌS‘Ÿ‚Ìƒ€[ƒr[‚ğÄ¶ó‘Ô‚É‚µ‚Ü‚·
+	PlayMovieToGraph(snowGraphHandle);  // áƒ€[ƒr[‚ğÄ¶ó‘Ô‚É‚µ‚Ü‚·
+	PlayMovieToGraph(anarogunoizuGraphHandle);  // ƒAƒiƒƒOƒmƒCƒYƒ€[ƒr[‚ğÄ¶ó‘Ô‚É‚µ‚Ü‚·
+	PlayMovieToGraph(gimenHandle);
+	PlayMovieToGraph(kodomogif);
 	return true;
 }
 
@@ -532,9 +564,9 @@ bool Game::Draw() {
 
 void Game ::InitStage()  // stage ‚Æ pos ‚ğ‰Šú‰»‚·‚é//ƒXƒe[ƒW2‚Ì121s–Ú‚ÌƒvƒƒOƒ‰ƒ€‚É‚æ‚èA‚±‚±‚Åì‚ç‚ê‚½u“_v‚ªuüv‚É‚È‚Á‚Ä‚¢‚éA
 {
-	for (j = 0; j < 7; j++) {
+	for (int j = 0; j < 7; j++) {
 		int w = (j - 3) * 230, h = 280;//ƒXƒe[ƒW‚Ì‰º‚ÌˆÊ’u‚ÅŒˆ‚ß‚½¶‚ğŒÅ’è‚µ‚½‚Ü‚Ü‚±‚±‚Å‘å‚«‚³‚ğ•Ï‚¦‚é(¶‰E‚ÖL‚Ñ‚Ä‘å‚«‚­‚È‚éB)A‚‚³‚Í‘å‚«‚³‚ğ•Ï‚¦‚é
-		for (i = 4; --i >= 0; ) {
+		for (int i = 4; --i >= 0; ) {
 			stage[i][j][0] = w + 750, stage[i][j][1] = h + 230;//ƒXƒe[ƒW‚ÌˆÊ’u‚ğ•Ï‚¦‚éA‚‚³‚ÍˆÊ’u‚ğ•Ï‚¦‚é
 			w = w * 7.8 / 10, h = h * 9 / 10;
 		}
@@ -547,7 +579,6 @@ void Game ::InitStage()  // stage ‚Æ pos ‚ğ‰Šú‰»‚·‚é//ƒXƒe[ƒW2‚Ì121s–Ú‚Ìƒvƒƒ
 			pos[i][j][1] = (stage[i][j][1] + stage[i + 1][j + 1][1]) / 2 - 65;
 		}
 	}
-
 
 	// !!!!‰J‚Ì‰‰o
 	for (int rain = 0; rain < rain_power; rain++)

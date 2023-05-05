@@ -25,8 +25,6 @@ public:
 
     int stage[4][7][2];  // 盤上のマスの格子点の座標
     int pos[3][6][2];    // キャラ描画座標
-    int i;
-    int j;
     // !!!!雨を降らす演出
     int rain_power;			// 量
     int rain_hairetsu[100][6];	// 配列
