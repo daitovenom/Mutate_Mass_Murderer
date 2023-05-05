@@ -188,7 +188,7 @@ Game::~Game() {
 
 }
 
-bool Game::Init(){
+bool Game::Init() {
 
 
 	//↓★関数で使いたい画像を瞬間に呼ぶのは時間がかかるし重いのでメインの中に既にスタンバっている状態にする。
@@ -212,21 +212,21 @@ bool Game::Init(){
 	PlayMovieToGraph(sinnzouGraphHandle);
 
 	// 雪ムービーファイルをロードします。
-	snowGraphHandle = LoadGraph("20160103081928.gif");
+	snowGraphHandle = LoadGraph("Assets/20160103081928.gif");
 	// 雪ムービーを再生状態にします
 	PlayMovieToGraph(snowGraphHandle);
 
 	// アナログノイズムービーファイルをロードします。
-	anarogunoizuGraphHandle = LoadGraph("MOSHED-2020-6-1-23-33-37.gif");
+	anarogunoizuGraphHandle = LoadGraph("Assets/MOSHED-2020-6-1-23-33-37.gif");
 	// アナログノイズムービーを再生状態にします
 	PlayMovieToGraph(anarogunoizuGraphHandle);
 
 	// ファイルをロードします。
-	gimenHandle = LoadGraph("photo0000-3903.bmp");
+	gimenHandle = LoadGraph("Assets/photo0000-3903.bmp");
 	PlayMovieToGraph(gimenHandle);
 
 	// ファイルをロードします。
-	kodomogif = LoadGraph("kodomo.gif");
+	kodomogif = LoadGraph("Assets/kodomo.gif");
 	PlayMovieToGraph(kodomogif);
 	// ファイルをロードします。
 	 //kaiwaHandle = OpenMovieToGraph("MOSHED-2020-6-2-19-11-5.gif");
@@ -235,60 +235,65 @@ bool Game::Init(){
 	//PlayMovieToGraph(kaiwaHandle);
 
 	// 電話にでるかどうかのファイルをロードします。
-	dennwaHandle = LoadGraph("dennwasenntaku.gif");
+	dennwaHandle = LoadGraph("Assets/dennwasenntaku.gif");
 
 	//会話のファイルをロードします。
-	enemytalk1Handle = LoadGraph("私のビデオ1.gif");
+	enemytalk1Handle = LoadGraph("Assets/私のビデオ1.gif");
 	//会話のファイルをロードします。
-	enemytalk2Handle = LoadGraph("enemytalk2.gif");
+	enemytalk2Handle = LoadGraph("Assets/enemytalk2.gif");
 
-	dennwa = LoadGraph("21b667f1-88cb-4e41-9bdc-41351a55655b.gif");
+	dennwa = LoadGraph("Assets/21b667f1-88cb-4e41-9bdc-41351a55655b.gif");
 
 	// ファイルをロードします。
-	SHOTHandle = LoadGraph("ENEMYGIF1.gif");
+	SHOTHandle = LoadGraph("Assets/ENEMYGIF1.gif");
 	PlayMovieToGraph(SHOTHandle);
 
 
 	// ヴィオラをロードします。
-	vioraHandle = LoadGraph("MOSHED-2020-6-2-19-37-21.gif");
+	vioraHandle = LoadGraph("Assets/MOSHED-2020-6-2-19-37-21.gif");
 	PlayMovieToGraph(vioraHandle);
 
 	// 説得中の背景をロードします。
-	settokugamenntyuunohaikeiHandle = LoadGraph("settokugamenntyuunohaikei.gif");
+	settokugamenntyuunohaikeiHandle = LoadGraph("Assets/settokugamenntyuunohaikei.gif");
 	PlayMovieToGraph(settokugamenntyuunohaikeiHandle);
 
 	// 選択し1をロードします。
-	settoku1Handle = LoadGraph("settoku1.gif");
+	settoku1Handle = LoadGraph("Assets/settoku1.gif");
 
 	// 戦闘後をロードします。
-	sentougoHandle = LoadGraph("senntougonoOUT.gif");
+	sentougoHandle = LoadGraph("Assets/senntougonoOUT.gif");
 
 	// コンティニュー画面の背景をロードします。
-	countimuHandle = LoadGraph("MOSHED-2020-6-1-23-49-29.gif");
+	countimuHandle = LoadGraph("Assets/MOSHED-2020-6-1-23-49-29.gif");
 	PlayMovieToGraph(countimuHandle);
 
 	//戦闘中の背景
-	stage1haikeiHandle = LoadGraph("stage1.gif");
+	stage1haikeiHandle = LoadGraph("Assets/stage1.gif");
 	PlayMovieToGraph(stage1haikeiHandle);
 
 	//戦闘中の背景
-	stage2haikeiHandle = LoadGraph("stage2haikei.gif");
+	stage2haikeiHandle = LoadGraph("Assets/stage2haikei.gif");
 	PlayMovieToGraph(stage2haikeiHandle);
 
 	//女教師の電話映像
-	dennwa = LoadGraph("dennwa2.gif");
+	dennwa = LoadGraph("Assets/dennwa2.gif");
 	PlayMovieToGraph(dennwa);
 
 
+
+	//タイトルの背景。
+	taitolhaikeiHandle = LoadGraph("Assets/taitoruhaikei.gif");
+	PlayMovieToGraph(taitolhaikeiHandle);
+
 	if (MovieGraphHandle == -1 || sinnzouGraphHandle == -1 || snowGraphHandle == -1 || anarogunoizuGraphHandle == -1 ||
-		gimenHandle == -1 || kodomogif == -1) {
+		gimenHandle == -1 || kodomogif == -1 || dennwaHandle == -1 || enemytalk1Handle == -1 || enemytalk2Handle == -1|| 
+		enemytalk1Handle == -1 || SHOTHandle == -1 || vioraHandle == -1 || settokugamenntyuunohaikeiHandle || settoku1Handle == -1 || 
+		sentougoHandle == -1 || countimuHandle == -1 || stage1haikeiHandle == -1 || stage2haikeiHandle == -1 || dennwa == -1 || 
+		taitolhaikeiHandle == -1)  {
 		return false;
 	}
 
 	//---------------------------------------------------------------------
-	//タイトルの背景。
-	taitolhaikeiHandle = LoadGraph("taitoruhaikei.gif");
-	PlayMovieToGraph(taitolhaikeiHandle);
 
 	LoadDivGraph("lockon.bmp", 3, 3, 1, 23, 23, lockonHandle);//なので、一度読み込むだけ画像は使えるし、処理を遅くしないためにループに入る前かつWinMainの中に書いた。
 	LoadDivGraph("ENEMYVR1.bmp", 3, 3, 1, 18, 33, enemyGHandle);
