@@ -32,7 +32,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int nCmdShow)
 	SetDrawScreen(DX_SCREEN_BACK);     // 裏画面を使用する設定
 
 	// ここでバグが出てる
-	Game* game = new Game();
+	Game* game = new Game();  //生ポインタ　インスタンス　
 
 	if (!game)
 	{
@@ -1584,9 +1584,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int nCmdShow)
 		ScreenFlip();  // 裏画面を表画面に反映
 	}
 
-
-
+	delete(game);  //生ポインタ絶対解放
 	DxLib_End();  // ＤＸライブラリ使用の終了処理
 	return 0;  // ソフトの終了 
-
 }

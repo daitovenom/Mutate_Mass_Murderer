@@ -5,8 +5,6 @@
 //コンストラクタ = 最初に勝手に絶対呼びだされる
 Game::Game() {
 	//初期化
-	MovieGraphHandle = -1;
-
 	stage[4][7][2];  // 盤上のマスの格子点の座標
 	pos[3][6][2];    // キャラ描画座標
 	i;
@@ -37,7 +35,7 @@ Game::Game() {
 	// 0-2:後ろ向き、3-5:右向き、6-8:前向き、9-11:左向き
 	hartmarkhanndle[3] = -1;
 	bloodGHandle[3] = -1;
-	MovieGraphHandle;//背景のgifのための変数
+	MovieGraphHandle = -1;//背景のgifのための変数
 	anarogunoizuGraphHandle;
 	testplayerGHandle[1] = -1;
 
@@ -197,17 +195,19 @@ bool Game::Init(){
 	SetTransColor(255, 255, 255); // 読み込む画像の前にこいつを置くことで透明化できる。ループ内にも書いて正しく動くが毎回読み込むようになってしまうため処理が遅くなる。
 
 	// ムービーファイルをロードします
-	if (MovieGraphHandle = LoadGraph("180half_f.gif") == -1) {
-		return false;
-	}
+
+	MovieGraphHandle = LoadGraph("Assets/180half_f.gif");
+
 	// ムービーを再生状態にします
-	PlayMovieToGraph(MovieGraphHandle);
+	//PlayMovieToGraph(MovieGraphHandle);
 	// タイトルで出てくるムービーファイルをロードします。
 	//taitolGraphHandle = LoadGraph("321000000_mmw227fw.gif");
 	// タイトルで出てくるムービーを再生状態にします
 	PlayMovieToGraph(taitolGraphHandle);
 	//敵がダメージを受けた時の心臓のムービーファイルをロードします。
-	sinnzouGraphHandle = LoadGraph("original.gif");
+
+
+	sinnzouGraphHandle = LoadGraph("Assets/original.gif");
 	// 敵がダメージを受けた時の心臓のムービーを再生状態にします
 	PlayMovieToGraph(sinnzouGraphHandle);
 
@@ -279,6 +279,13 @@ bool Game::Init(){
 	dennwa = LoadGraph("dennwa2.gif");
 	PlayMovieToGraph(dennwa);
 
+
+	if (MovieGraphHandle == -1 || sinnzouGraphHandle == -1 || snowGraphHandle == -1 || anarogunoizuGraphHandle == -1 ||
+		gimenHandle == -1 || kodomogif == -1) {
+		return false;
+	}
+
+	//---------------------------------------------------------------------
 	//タイトルの背景。
 	taitolhaikeiHandle = LoadGraph("taitoruhaikei.gif");
 	PlayMovieToGraph(taitolhaikeiHandle);
