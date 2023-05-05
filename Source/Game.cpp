@@ -1,14 +1,188 @@
 #include "Game.h"
 
-Game* Game::_instance = NULL;
+
 
 //コンストラクタ = 最初に勝手に絶対呼びだされる
 Game::Game() {
 	//初期化
-	_instance = this;
 	MovieGraphHandle = -1;
 
+	stage[4][7][2];  // 盤上のマスの格子点の座標
+	pos[3][6][2];    // キャラ描画座標
+	i;
+	j;
+	// !!!!雨を降らす演出
+	rain_power;			// 量
+	rain_hairetsu[100][6];	// 配列
+	rain_kakudo;			// 入射角度量
+	rain_speed;			// 速度
 
+	// !!!!雪を降らす演出
+	snow_power;			// 量
+	snow_hairetsu[100][6];	// 配列
+	snow_kakudo;			// 入射角度量
+	snow_speed;		// 速度
+
+	//initStageから下の変数
+
+	White;
+	function_status;//戦闘画面中は1とするための変数function_statusの定義
+
+
+
+	lockonHandle[3] = { -1};
+	enemyGHandle[4] = -1;   // 敵のグラフィックハンドル格納用配列
+	playerGHandle[8] = -1;  // 俺のグラフィックハンドル格納用配列
+	kikennhanndle[12] = -1;
+	// 0-2:後ろ向き、3-5:右向き、6-8:前向き、9-11:左向き
+	hartmarkhanndle[3] = -1;
+	bloodGHandle[3] = -1;
+	MovieGraphHandle;//背景のgifのための変数
+	anarogunoizuGraphHandle;
+	testplayerGHandle[1] = -1;
+
+	enemyImage;    // 敵 左向き 初期値でのenemyImageにenemyGHandle[3]が入ってるだけで、条件によってはenemyGHandle[3]も意外も入る。
+	playerImage;   // 俺 右向き//★上で「int playerGHandle[8];  // 俺のグラフィックハンドル格納用配列」と定義して、
+
+	testplayerImage;   // 俺 右向き
+	lockImge;
+	hartmarkImge;
+	bloodImage;
+	gimenHandle;
+
+
+	taitolGraphHandle;
+	taitoitoumeika;
+	sinnzouGraphHandle;
+	sinnzoutoumeika;
+	snowGraphHandle;
+
+
+	//主人公の攻撃を表す画像を制御するための変数
+
+	playernaguruImage;
+	playernaguruAGHandle[1] = -1;
+	playernaguruBGHandle[1] = -1;
+	playertabakoImage;
+	playertabakoAHandle[1] = -1;
+	playertabakoBHandle[1] = -1;
+	playertabakoCHandle[1] = -1;
+	playertabakoDHandle[1] = -1;
+	playeridouAHandle[1] = -1;
+	playeridouImage;
+	playeridouA3Handle[1] = -1;
+	playerKONNBO1AHandle[1] = -1;
+	playerKONNBO1AImage;
+	KONNBO1A;
+	playerKONNBO1BHandle[1] = -1;
+	playerKONNBO1BImage;
+	ENEMYkougekiA1Handle[1] = -1;
+	ENEMYkougekiA2Handle[1] = -1;
+	ENEMYkougekiA1Image;
+	ENEMYkougekiA2Image;
+	playeridouA2Image;
+	playeridouA2Handle[1] = -1;
+	playeridouA4Handle[1] = -1;
+	mozigrateHandle[1] = -1;
+	kaiwaHandle;
+	SHOTHandle;
+	vioraHandle;
+	K1Handle;
+	playerKONNBO1ANOIZU1Handle[1] = -1;
+	playerKONNBO1ANOIZU2Handle[1] = -1;
+	playerKONNBO1ANOIZU3Handle[1] = -1;
+	playerKONNBO1ANOIZU4Handle[1] = -1;
+	player1GHandle[1] = -1;
+	player2GHandle[1] = -1;
+	player3GHandle[1] = -1;
+	player4GHandle[1] = -1;
+	player5GHandle[1] = -1;
+	dennwaHandle;
+	RED;      // 赤色コードを取得
+	settoku1Handle;
+	enemy2Image;
+	enemy2Handle[1] = -1;
+	enemy2AHandle[1] = -1;
+	settokugamenntyuunohaikeiHandle;
+	sentougoHandle;
+	countimuHandle;
+	enemytalk1Handle;
+	enemytalk2Handle;
+	ModelHandle;
+	handle;
+	enemygameGHandle[1] = -1;
+	jimenGHandle;
+	houseModel;
+	enemy2[3] = -1;
+	enemyImage2;
+	enemy3[3] = -1;
+	enemyImage3;
+	playerKENJYUUImage;
+	playerKENJYUU[5];
+	playernaguruBGHandle2[1] = -1;
+	playernaguruBGHandle3[1] = -1;
+	taitolHandle[1] = -1;
+	STAGE2ENEMY2kougekiA1Handle[1] = -1;
+	STAGE2ENEMY2kougekiB1Handle[1] = -1;
+	STAGE2ENEMY1kougekiA1Handle[1] = -1;
+	STAGE2ENEMY1hirumiHandle[1] = -1;
+	STAGE2ENEMY2hirumiHandle[1] = -1;
+	STAGE2ENEMY1kougekiB1Handle[1] = -1;
+	enemy1KENJYUUHandle[2] = -1;
+	KATANA[1] = -1;
+	KATANA2[1] = -1;
+	KATANA3A[1] = -1;
+	KATANA3[1] = -1;
+	kikkuhanntenn[1] = -1;
+	playeridouA5Handle[1] = -1;
+	playergardGHandle[1] = -1;
+	playerdamegeGHandle[1] = -1;
+	enemy2damegeHandle[1] = -1;
+	enemy3damegeHandle[1] = -1;
+	old_trailerHandle;
+	poleModel;
+	enemydamegeHandle[1] = -1;
+	byouga;
+
+	//画像
+	dennwa;
+	firudoModel;
+	taitol2Handle[1];
+	kodomogif;
+	stage2haikeiHandle;
+	taitolhaikeiHandle;
+	stage1haikeiHandle;
+	migiarukugazou[1];
+	migiaruku2gazou[1];
+	hidariarukugazou[1];
+	hidariaruku2gazou[1];
+	sitaarukugazou[1];
+	sitaaruku2gazou[1];
+	uearukugazou[1];
+	uearuku2gazou[1];
+	syuzinnkouyokerugazou[1];
+	syuzinnkouyokerugazou2[1];
+	playerHandle2[3];
+	playeridouAhidariHandle[1];
+	playeridouA4hidariHandle[1];
+	playeridouA2hidariHandle[1];
+	playeridouA3hidariHandle[1];
+	playeridouA5hidariHandle[1];
+	playerKENJYUUhidari[5];
+	playernaguruAGHandleB[1];
+	playernaguruBGHandleB[1];
+	playernaguruBGHandle2B[1];
+	playernaguruBGHandle3B[1];
+	playerKONNBO1AHandleB[1];
+	playerKONNBO1ANOIZU1HandleB[1];
+	playerKONNBO1ANOIZU2HandleB[1];
+	playerKONNBO1ANOIZU3HandleB[1];
+	playerKONNBO1ANOIZU4HandleB[1];
+	playerKONNBO1BHandleB[1];
+	KATANAB[1];
+	KATANA2B[1];
+	KATANA3B[1];
+	KATANA3B1[1];
 }
 
 //デストラクタ = 最後に勝手に絶対呼びだされる
@@ -198,9 +372,9 @@ bool Game::Init(){
 	LoadDivGraph("enemystage2attack2anemy1KENJYUU.bmp", 2, 2, 1, 30, 45, enemy1KENJYUUHandle);
 
 	//LoadDivGraph("enemystage2attack2anemy1KENJYUU.bmp", 2, 2, 1, 30, 45, enemy1KENJYUUhidariHandle);
-	LoadDivGraph("naihuGAZOU1.bmp", 1, 1, 1, 30, 70, naihuHandle);
+	//LoadDivGraph("naihuGAZOU1.bmp", 1, 1, 1, 30, 70, naihuHandle);
 
-	LoadDivGraph("naihu2.bmp", 1, 1, 1, 30, 30, naihu2Handle);
+	//LoadDivGraph("naihu2.bmp", 1, 1, 1, 30, 30, naihu2Handle);
 
 
 

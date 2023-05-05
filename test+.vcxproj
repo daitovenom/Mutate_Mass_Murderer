@@ -154,6 +154,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Source\Game.cpp" />
+    <ClCompile Include="Source\memo.cpp" />
     <ClCompile Include="Source\testgame2023+.cpp" />
   </ItemGroup>
   <ItemGroup>

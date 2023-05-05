@@ -32,7 +32,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int nCmdShow)
 	SetDrawScreen(DX_SCREEN_BACK);     // 裏画面を使用する設定
 
 	// ここでバグが出てる
-	Game* game = Game::GetInstance();
+	Game* game = new Game();
 
 	if (!game)
 	{
